@@ -1,0 +1,114 @@
+.trust-section {
+  padding: 100px;
+  background-color: var(--primary-color, white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.trust-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  /* max-width: 1400px; */
+  /* gap: 50px; */
+}
+
+/* Left Content Styling */
+.trust-content {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.trust-content .head-text {
+  font-size: 60px;
+  line-height: 1.1;
+  color: black;
+  font-weight: 400;
+}
+
+.trust-content .sub-para-text {
+  font-size: 18px;
+  color: #666;
+  max-width: 90%;
+  line-height: 1.6;
+}
+
+.trust-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 30px;
+  background-color: transparent;
+  color: black;
+  text-decoration: none;
+  border: 1px solid black;
+  font-family: var(--font-secondary, "Poppins", sans-serif);
+  font-size: 16px;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.trust-btn:hover {
+  background-color: black;
+  color: white;
+}
+
+.trust-btn:hover .arrow-icon {
+  transform: translateX(5px);
+}
+
+/* Right Visuals Styling */
+.trust-visuals {
+  width: 50%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Updated Phone Screen Container */
+.phone-screen {
+  width: 100%;
+  max-width: 300px; /* Limits width to a phone size */
+}
+    
+.screen-video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .trust-content .head-text {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 768px) {
+  .trust-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .trust-content {
+    width: 100%;
+    align-items: center;
+  }
+
+  .trust-visuals {
+    width: 100%;
+    margin-top: 50px;
+  }
+  
+  .phone-screen {
+    max-width: 250px; /* Slightly smaller on mobile if needed */
+  }
+}
