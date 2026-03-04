@@ -20,7 +20,6 @@ import img7 from "../assets/images/Recognitions/7.webp";
 import img8 from "../assets/images/Recognitions/8.png";
 import img9 from "../assets/images/Recognitions/9.jpeg";
 import img10 from "../assets/images/Recognitions/10.png";
-import img11 from "../assets/images/Recognitions/11.png";
 
 const recognitionLogos = [
   img1,

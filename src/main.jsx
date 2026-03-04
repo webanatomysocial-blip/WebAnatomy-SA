@@ -9,6 +9,9 @@ import Careers from "./pages/Careers";
 import About from "./pages/About";
 import ScrollToTop from "./components/ScrollToTop";
 import Works from "./pages/Works";
+import Services from "./pages/Services";
+import Solutions from "./pages/Solutions";
+import Industries from "./pages/Industries";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import "./css/index.css";
@@ -45,8 +48,11 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/careers" element={<Careers />} />
         <Route path="/about" element={<About />} />
         <Route path="/works" element={<Works />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/solutions" element={<Solutions />} />
+        <Route path="/industries" element={<Industries />} />
       </Routes>
       <Footer />
     </BrowserRouter>
-  </React.StrictMode>
+  </React.StrictMode>,
 );

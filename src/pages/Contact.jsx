@@ -122,12 +122,12 @@ const Contact = () => {
                 <InfoCard
                   icon={<GoCommentDiscussion />}
                   title="General Enquiry"
-                  value="+91 9705030977"
+                  value="+91 9999999999"
                 />
                 <InfoCard
                   icon={<GoPerson />}
                   title="Sales Enquiry"
-                  value="+91 9705030977"
+                  value="+91 9999999999"
                 />
                 <InfoCard
                   icon={<GoMail />}
@@ -137,7 +137,7 @@ const Contact = () => {
                 <InfoCard
                   icon={<GoDeviceMobile />}
                   title="HR Enquiry"
-                  value="+91 9705030977"
+                  value="+91 9999999999"
                 />
               </div>
             </div>
