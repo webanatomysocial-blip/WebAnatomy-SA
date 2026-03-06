@@ -1,0 +1,97 @@
+.vision-mission-section {
+    background-color: black;
+    padding: 100px 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.vision-mission-container {
+    display: flex;
+    gap: 30px;
+    max-width: 1400px;
+    width: 100%;
+}
+
+.vm-card {
+    background-color: white;
+    border-radius: 25px;
+    padding: 50px;
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    overflow: hidden;
+    min-width: 0;
+}
+
+.vm-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: white;
+    border: 1px solid #eee;
+    padding: 6px 14px;
+    border-radius: 30px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #333;
+    align-self: flex-start;
+    letter-spacing: 0.08em;
+}
+
+.vm-diamond {
+    color: #ffd700;
+    font-size: 1.2rem;
+}
+
+.vm-image-placeholder {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 220px;
+    padding: 20px 0;
+}
+
+.vm-image-placeholder img {
+    width: 160px;
+    height: 160px;
+    object-fit: contain;
+}
+
+.vm-text {
+    margin-top: auto;
+    padding-top: 20px;
+    border-top: 1px solid #f0f0f0;
+        word-wrap: break-word;
+    overflow-wrap: break-word;
+    width: 100%;
+}
+
+/* AnimatedScrollText styles */
+.vm-animated-text {
+    margin: 0;
+    line-height: 1.7;
+    font-size: 1rem;
+    font-weight: 400;
+    max-width: 100%;
+}
+
+.char-span {
+    display: inline;
+    color: #ccc;
+    transition: color 0.1s;
+    font-size: 1rem;
+    font-weight: 400;
+    font-family: inherit;
+    white-space: normal;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .vision-mission-container {
+        flex-direction: column;
+    }
+}

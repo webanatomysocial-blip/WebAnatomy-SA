@@ -1,0 +1,7 @@
+/* AnimatedHeading – word-by-word reveal */
+
+.animated-heading .ah-word {
+  display: inline-block;
+  opacity: 0;          /* hidden until GSAP animates */
+  will-change: transform, opacity;
+}

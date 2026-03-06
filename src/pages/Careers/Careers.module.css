@@ -1,0 +1,577 @@
+/* ===============================
+   THE HEART OF OUR SUCCESS
+=============================== */
+.wa-careers-heart {
+  background: #ffffff;
+}
+
+.wa-careers-heart-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 120px 20px;
+  text-align: center;
+}
+
+.wa-careers-heart-title {
+  font-family: var(--font-primary);
+  font-size: 42px;
+  font-weight: 200;
+  margin-bottom: 20px;
+}
+
+.wa-careers-heart-desc {
+  max-width: 780px;
+  margin: 0 auto 60px;
+  font-family: var(--font-secondary);
+  font-size: 16px;
+  line-height: 1.7;
+  opacity: 0.75;
+}
+
+/* VIDEO */
+.wa-careers-video-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-top: 56.25%; /* 16:9 ratio */
+}
+
+.wa-careers-video-wrapper iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* ===============================
+   RESPONSIVE
+=============================== */
+@media (max-width: 768px) {
+  .wa-careers-heart-title {
+    font-size: 32px;
+  }
+
+  .wa-careers-heart-desc {
+    font-size: 15px;
+  }
+}
+
+/* ===============================
+   CAREERS – PERKS & BENEFITS
+=============================== */
+.wa-careers-perks {
+  background: #f9f9f9;
+}
+
+.wa-careers-perks-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 120px 20px;
+}
+
+/* HEADER */
+.wa-careers-perks-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 80px;
+}
+
+.wa-careers-perks-title {
+  font-family: var(--font-primary);
+  font-size: 52px;
+  font-weight: 200;
+}
+
+.wa-careers-perks-subtext {
+  max-width: 380px;
+  font-family: var(--font-secondary);
+  font-size: 16px;
+  line-height: 1.6;
+  opacity: 0.8;
+}
+
+/* LIST */
+.wa-careers-perks-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px 40px;
+}
+
+.wa-careers-perk {
+  width: calc(33.333% - 27px);
+}
+
+/* ICON */
+.wa-careers-perk-icon {
+  font-size: 32px;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+/* TEXT */
+.wa-careers-perk h3 {
+  font-family: var(--font-primary);
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 12px;
+}
+
+.wa-careers-perk p {
+  font-family: var(--font-secondary);
+  font-size: 14px;
+  line-height: 1.6;
+  opacity: 0.75;
+  margin-bottom: 25px;
+}
+
+/* DIVIDER */
+.wa-careers-perk-line {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: #000;
+  opacity: 0.15;
+}
+
+/* ===============================
+   RESPONSIVE
+=============================== */
+@media (max-width: 1024px) {
+  .wa-careers-perk {
+    width: calc(50% - 20px);
+  }
+
+  .wa-careers-perks-header {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .wa-careers-perk {
+    width: 100%;
+  }
+
+  .wa-careers-perks-title {
+    font-size: 36px;
+  }
+}
+
+/* ===============================
+   VALUES – REAL STICKY SECTION
+=============================== */
+
+/* Tall section (this creates scroll space) */
+.wa-careers-values-sticky {
+  /* width: 1200px; */
+  background: #000;
+  color: #fff;
+  padding: 100px;
+  margin: auto;
+}
+
+/* Inner wrapper */
+.wa-values-inner {
+  /* max-width: 1400px; */
+  margin: 0 auto;
+  padding: 0 20px;
+
+  display: flex;
+  gap: 140px;
+  align-items: flex-start;
+}
+
+/* LEFT — STICKS UNTIL SECTION ENDS */
+.wa-values-left {
+  position: sticky;
+  top: 120px;
+
+  flex: 0 0 420px;
+}
+
+.wa-values-left h2 {
+  font-family: var(--font-primary);
+  font-size: 56px;
+  font-weight: 200;
+  line-height: 1.1;
+  margin-bottom: 24px;
+}
+
+.wa-values-left p {
+  max-width: 360px;
+  font-family: var(--font-secondary);
+  font-size: 15px;
+  line-height: 1.7;
+  opacity: 0.75;
+}
+
+/* Arrow mark */
+.wa-values-arrow {
+  margin-top: 90px;
+  position: relative;
+  width: 60px;
+  height: 60px;
+}
+
+.wa-values-arrow span {
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  background: #fff;
+  top: 50%;
+  left: 0;
+}
+
+.wa-values-arrow span:last-child {
+  transform: rotate(90deg);
+  left: 14px;
+}
+
+/* RIGHT — CREATES SCROLL HEIGHT */
+.wa-values-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 180px;
+}
+
+/* VALUE BLOCK */
+.wa-value-block {
+  position: relative;
+  padding-left: 40px;
+}
+
+.wa-value-block::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 1px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.wa-value-block span {
+  font-size: 13px;
+  opacity: 0.6;
+  font-family: var(--font-secondary);
+}
+
+.wa-value-block h3 {
+  font-family: var(--font-primary);
+  font-size: 44px;
+  font-weight: 200;
+  margin: 16px 0;
+}
+
+.wa-value-block p {
+  max-width: 420px;
+  font-family: var(--font-secondary);
+  font-size: 15px;
+  line-height: 1.7;
+  opacity: 0.75;
+}
+
+/* ===============================
+   RESPONSIVE
+=============================== */
+@media (max-width: 1024px) {
+  .wa-values-inner {
+    flex-direction: column;
+    gap: 80px;
+  }
+
+  .wa-values-left {
+    position: relative;
+    top: 0;
+  }
+}
+/* ===============================
+   CURRENT OPENINGS – ADVANCED
+=============================== */
+
+.wa-careers-openings-advanced {
+  background: #ffffff;
+}
+
+.wa-careers-openings-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 120px 20px;
+  text-align: center;
+}
+
+.wa-openings-title {
+  font-family: var(--font-primary);
+  font-size: 48px;
+  font-weight: 200;
+  margin-bottom: 12px;
+}
+
+.wa-openings-subtext {
+  font-family: var(--font-secondary);
+  font-size: 15px;
+  opacity: 0.75;
+  margin-bottom: 60px;
+}
+
+/* ACCORDION */
+.wa-opening-category {
+  border-top: 1px solid #e5e5e5;
+}
+
+.wa-opening-category:last-child {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.wa-opening-header {
+  width: 100%;
+  padding: 26px 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-family: var(--font-primary);
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.wa-opening-header em {
+  font-style: normal;
+  opacity: 0.5;
+}
+
+.wa-opening-header svg {
+  transition: transform 0.3s ease;
+}
+
+.wa-opening-header svg.rotate {
+  transform: rotate(180deg);
+}
+
+/* ===============================
+   CURRENT OPENINGS – SIMPLE ACCORDION
+=============================== */
+
+.wa-careers-openings-advanced {
+  background: #ffffff;
+}
+
+.wa-careers-openings-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 120px 20px;
+  text-align: center;
+}
+
+.wa-openings-title {
+  font-family: var(--font-primary);
+  font-size: 48px;
+  font-weight: 200;
+  margin-bottom: 12px;
+}
+
+.wa-openings-subtext {
+  font-family: var(--font-secondary);
+  font-size: 15px;
+  opacity: 0.75;
+  margin-bottom: 60px;
+}
+
+/* ACCORDION */
+.wa-opening-category {
+  border-top: 1px solid #e5e5e5;
+}
+
+.wa-opening-category:last-child {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.wa-opening-header {
+  width: 100%;
+  padding: 26px 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-family: var(--font-primary);
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.wa-opening-header svg {
+  transition: transform 0.3s ease;
+}
+
+.wa-opening-header svg.rotate {
+  transform: rotate(180deg);
+}
+
+/* CONTENT */
+.wa-opening-content {
+  padding: 20px 0 40px;
+  text-align: left;
+}
+
+.wa-opening-content p {
+  font-family: var(--font-secondary);
+  font-size: 14px;
+  line-height: 1.7;
+  opacity: 0.75;
+  max-width: 700px;
+  margin-bottom: 20px;
+}
+
+/* APPLY BUTTON */
+.wa-apply-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  font-family: var(--font-secondary);
+  font-size: 13px;
+  text-decoration: none;
+  color: #000;
+}
+
+.wa-apply-btn svg {
+  transition: transform 0.3s ease;
+}
+
+.wa-apply-btn:hover svg {
+  transform: translateX(4px);
+}
+
+/* ===============================
+   RESPONSIVE
+=============================== */
+@media (max-width: 640px) {
+  .wa-openings-title {
+    font-size: 36px;
+  }
+}
+
+/* ===============================
+   CAREERS HERO
+=============================== */
+
+.wa-careers-hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Background */
+.wa-careers-hero-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  transform: scale(1.02);
+  background: url("../assets//images//Home-images/banner-images/1.webp");
+}
+
+/* Dark overlay */
+.wa-careers-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+/* Content */
+.wa-careers-hero-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  color: #ffffff;
+}
+
+.wa-careers-hero-title {
+  font-family: var(--font-primary);
+  font-size: 64px;
+  font-weight: 200;
+  line-height: 1.15;
+  margin-bottom: 24px;
+}
+
+.wa-careers-hero-desc {
+  font-family: var(--font-secondary);
+  font-size: 14px;
+  line-height: 1.7;
+  max-width: 520px;
+  opacity: 0.85;
+  margin-bottom: 40px;
+}
+
+/* CTA Button */
+.wa-careers-hero-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 14px 28px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+
+  color: #fff;
+  text-decoration: none;
+  font-family: var(--font-secondary);
+  font-size: 13px;
+  font-weight: 400;
+
+  transition: all 0.3s ease;
+}
+
+.wa-careers-hero-btn svg {
+  transition: transform 0.3s ease;
+}
+
+.wa-careers-hero-btn:hover {
+  background: #fff;
+  color: #000;
+}
+
+.wa-careers-hero-btn:hover svg {
+  transform: translateX(5px);
+}
+
+/* ===============================
+   RESPONSIVE
+=============================== */
+
+@media (max-width: 768px) {
+  .wa-careers-hero-title {
+    font-size: 44px;
+  }
+
+  .wa-careers-hero-desc {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .wa-careers-hero-title {
+    font-size: 36px;
+  }
+}

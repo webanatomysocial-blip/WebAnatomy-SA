@@ -3,18 +3,19 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
-import Contact from "./pages/Contact";
-import Careers from "./pages/Careers";
-import About from "./pages/About";
+import Home from "./pages/Home/Home";
+import Contact from "./pages/Contact/Contact";
+import Careers from "./pages/Careers/Careers";
+import About from "./pages/About/About";
 import ScrollToTop from "./components/ScrollToTop";
-import Works from "./pages/Works";
-import Services from "./pages/Services";
-import Solutions from "./pages/Solutions";
-import Industries from "./pages/Industries";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import "./css/index.css";
+import Works from "./pages/Works/Works";
+import Services from "./pages/Services/Services";
+import Solutions from "./pages/Solutions/Solutions";
+import Industries from "./pages/Industries/Industries";
+import Blog from "./pages/Blog/Blog";
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
+import "./styles/global.css";
 import Lenis from "@studio-freight/lenis";
 
 // Global Lenis initialization
@@ -51,6 +52,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/services" element={<Services />} />
         <Route path="/solutions" element={<Solutions />} />
         <Route path="/industries" element={<Industries />} />
+        <Route path="/blog" element={<Blog />} />
       </Routes>
       <Footer />
     </BrowserRouter>

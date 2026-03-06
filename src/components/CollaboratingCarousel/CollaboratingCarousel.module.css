@@ -1,0 +1,84 @@
+.collaborating-section {
+  background-color: #fff; /* White background as per user image */
+  padding: 40px 50px;
+  width: 100%;
+  overflow: hidden;
+  border-top: 1px solid #f0f0f0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.collaborating-content {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.collaborating-heading {
+  color: #000; /* Black text */
+  font-size:20px;
+  font-weight: 600 !important;
+  text-align: center;
+  margin-bottom: 20px;
+  letter-spacing: -0.01rem;
+}
+
+.collaborating-marquee {
+  width: 100%;
+  position: relative;
+  /* Mask to fade edges */
+  mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 1) 15%,
+    rgba(0, 0, 0, 1) 85%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 1) 15%,
+    rgba(0, 0, 0, 1) 85%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+.collaborating-swiper .swiper-wrapper {
+  transition-timing-function: linear !important;
+}
+
+.logo-slide {
+  width: auto !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 100px; /*ased padding slightly for larger logos */
+  
+}
+
+.partner-logo {
+  height: 100px;
+  width: auto;
+  filter: none;
+  opacity: 1; /* Full opacity by default */
+  transition: transform 0.3s ease;
+}
+
+.partner-logo:hover {
+  transform: scale(1.05); /* Subtle scale on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .collaborating-section {
+    padding: 60px 0;
+  }
+  
+  .collaborating-heading {
+    font-size: 1rem;
+    margin-bottom: 40px;
+    padding: 0 20px;
+  }
+  
+  .partner-logo {
+    height: 45px; /* Increased from 35px for mobile */
+  }
+}

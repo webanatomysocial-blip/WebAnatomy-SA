@@ -1,0 +1,5 @@
+.animated-letter-heading .al-letter {
+  display: inline-block;
+  opacity: 0;
+  will-change: transform, opacity;
+}

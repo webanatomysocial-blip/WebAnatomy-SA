@@ -1,0 +1,318 @@
+/* src/css/index.css */
+
+:root {
+  --primary-color: white;
+  --secondary-color: black;
+  --Yellow-color: #ffdd00;
+  --blue: #0033bf;
+  --grey: #f5f5f5;
+  --overlay-bg: rgba(0, 0, 0, 0.5);
+  --overlay-cta-bg: rgba(0, 0, 0, 0.3);
+  --progress-bg: #9b9b9b;
+  --progress-active-bg: rgb(116, 116, 116);
+
+  --font-primary: "Poppins", sans-serif;
+  --font-secondary: "Poppins", sans-serif;
+
+  --transition-slow: 1.2s cubic-bezier(0.65, 0, 0.35, 1);
+  --transition-medium: 0.5s ease-in-out;
+  --transition-fast: 0.3s ease;
+}
+
+html {
+  scroll-behavior: auto !important;
+  /* Disables default smooth scrolling */
+
+  scrollbar-color: var(--Yellow-color) var(--secondary-color);
+  scrollbar-width: thin;
+}
+
+html::-webkit-scrollbar {
+  width: 4px;
+  /* Very thin scrollbar */
+}
+
+html::-webkit-scrollbar-track {
+  background: transparent;
+  /* Transparent track */
+}
+
+html::-webkit-scrollbar-thumb {
+  background: var(--Yellow-color);
+  /* Yellow thumb */
+  border-radius: 2px;
+  /* Smaller radius for thinner scrollbar */
+}
+
+html::-webkit-scrollbar-thumb:hover {
+  background: var(--Yellow-color);
+  /* Slightly darker yellow on hover */
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* fonts start  */
+
+/* Regular - 400 */
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/Poppins-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Medium - 500 */
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/Poppins-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* SemiBold - 600 */
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/Poppins-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Bold - 700 */
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/Poppins-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+h1 {
+  font-size: 60px;
+  margin: 0;
+  padding: 0;
+  line-height: 1.2em;
+  letter-spacing: 0px;
+  font-family: var(--font-primary);
+}
+
+h2 {
+  font-size: 40px;
+  margin: 0;
+  padding: 0;
+  line-height: 1.2em;
+  letter-spacing: 0px;
+  font-family: var(--font-primary);
+}
+
+h3 {
+  font-size: 24px;
+  margin: 0;
+  padding: 0;
+  line-height: 1.2em;
+  letter-spacing: 0px;
+  font-family: var(--font-primary);
+}
+
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  line-height: 1.2em;
+  letter-spacing: 0px;
+  font-family: var(--font-primary);
+}
+
+p {
+  font-size: 18px;
+  font-family: var(--font-secondary);
+  line-height: 1.4em;
+}
+
+.big-head-text {
+  font-size: 80px;
+  font-family: var(--font-primary);
+  font-weight: 500;
+  color: var(--secondary-color);
+}
+.big-head-text-white {
+  font-size: 140px;
+  font-family: var(--font-primary);
+  font-weight: 500;
+  color: var(--primary-color);
+}
+.head-text {
+  font-size: 40px; /* Aligned with Normal Heading 40px */
+  font-family: var(--font-primary);
+  font-weight: 500;
+  color: var(--secondary-color);
+}
+
+.head-text-white {
+  font-size: 40px; /* Aligned with Normal Heading 40px */
+  font-family: var(--font-primary);
+  font-weight: 500;
+  color: var(--primary-color);
+}
+
+.para-text {
+  font-size: 18px;
+  font-family: var(--font-secondary);
+  font-weight: 300;
+  line-height: 1.4em;
+  color: var(--progress-active-bg);
+}
+
+.para-text-white {
+  font-size: 18px;
+  font-family: var(--font-secondary);
+  font-weight: 300;
+  line-height: 1.4em;
+  color: var(--primary-color);
+}
+
+.sub-head-text {
+  font-size: 26px;
+  font-family: var(--font-primary);
+  font-weight: 300;
+  line-height: 1.4em;
+  color: var(--secondary-color);
+}
+
+.sub-head-text-white {
+  font-size: 26px;
+  font-family: var(--font-primary);
+  font-weight: 300;
+  line-height: 1.4em;
+  color: var(--primary-color);
+}
+
+.sub-para-text {
+  font-size: 16px;
+  font-family: var(--font-secondary);
+  font-weight: 300;
+  line-height: 1.4em;
+  color: var(--progress-active-bg);
+  padding-bottom: 20px;
+}
+
+.sub-para-text-white {
+  font-size: 16px;
+  font-family: var(--font-secondary);
+  font-weight: 300;
+  line-height: 1.4em;
+  color: var(--primary-color);
+}
+
+/* fonts End  */
+
+/* buttons start  */
+
+.black-bg-btn {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  padding: 14px 20px;
+  text-decoration: none;
+  border: 1px solid var(--primary-color);
+  cursor: pointer;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease-in-out;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-family: var(--font-secondary);
+  width: fit-content;
+  /* Remove or animate in later */
+  z-index: 10;
+}
+.arrow-icon {
+  transition: all 0.3s ease-in-out;
+}
+.black-bg-btn:hover {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+.black-bg-btn:hover .arrow-icon {
+  transform: translateX(6px);
+}
+
+.white-bg-btn {
+  background-color: var(--primary-color);
+  /* usually white or light */
+  color: var(--secondary-color);
+  /* usually black or dark */
+  padding: 14px 20px;
+  text-decoration: none;
+  border: 1px solid var(--secondary-color);
+  cursor: pointer;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+  margin: 20px 0;
+  font-size: 16px;
+  font-family: var(--font-secondary);
+  width: fit-content;
+
+  /* Change to 1 or animate in */
+  z-index: 1;
+}
+
+.white-bg-btn:hover {
+  background-color: var(--secondary-color);
+  /* dark on hover */
+  color: var(--primary-color);
+  /* white text */
+  border-color: var(--secondary-color);
+}
+
+.white-bg-btn:hover .arrow-icon {
+  transform: translateX(6px);
+}
+
+.transparent-bg-btn {
+  background-color: transparent;
+  /* usually white or light */
+  color: var(--blue);
+  /* usually black or dark */
+  padding: 0px;
+  text-decoration: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+  margin: 20px 0;
+  font-size: 16px;
+  font-family: var(--font-secondary);
+  width: fit-content;
+  border: none;
+
+  /* Change to 1 or animate in */
+  z-index: 1;
+}
+
+.transparent-bg-btn:hover .arrow-icon {
+  transform: translateX(6px);
+}
+
+/* buttons End */
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--primary-color);
+}
