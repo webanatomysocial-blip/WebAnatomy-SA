@@ -5,6 +5,7 @@ import Approach from "../../components/Approach/Approach.jsx";
 import Pers from "../../components/Perspective/Perspective.jsx";
 import Recognised from "../../components/Recognised/Recognised.jsx";
 import AnimatedContent from "../../components/AnimatedContent/AnimatedContent.jsx";
+import AboutRecognitions from "../../components/AboutRecognitions/AboutRecognitions.jsx";
 
 const About = () => {
   const animProps = {
@@ -23,6 +24,8 @@ const About = () => {
     <>
       <AboutOurStory />
 
+   
+
       {/* AboutOneOnOneSection and VisionMission have internal animations, no AnimatedContent wrapper */}
       <AboutOneOnOneSection />
       
@@ -33,6 +36,7 @@ const About = () => {
       <Pers />
 
       <Recognised />
+      <AboutRecognitions />
     </>
   );
 };

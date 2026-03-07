@@ -12,7 +12,7 @@
 .wa-about-hero-bg {
   position: absolute;
   inset: 0;
-  background-image: url("../assets/images/contact/contactbg.webp");
+  background-color: #000; /* Fallback since image is missing */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -156,6 +156,21 @@
     padding-left: 6%;
     padding-bottom: 60px;
   }
+
+  .about-headingcolor-change-section {
+    padding: 60px 20px;
+    height: auto;
+    min-height: 60vh;
+  }
+
+  .about-headingcolor-change-section-title {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .about-headingcolor-change-section-title span {
+    font-size: 40px;
+  }
 }
 
 /* ===============================
@@ -198,9 +213,19 @@
 =============================== */
 
 @media (max-width: 768px) {
+  .wa-global-impact-about-page {
+    flex-direction: column;
+    padding: 60px 20px;
+  }
+
+  .wa-global-impact-title,
+  .wa-global-impact-content-wrapper {
+    width: 100%;
+  }
+
   .wa-global-impact-title {
     font-size: 36px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
   }
 
   .wa-global-impact-image-wrapper img {

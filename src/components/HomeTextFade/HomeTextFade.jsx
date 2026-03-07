@@ -46,26 +46,34 @@ And our mission is to imagine the possibilities.`;
       <div className={styles['text-container']}>
         {lines.map((line, lineIndex) => (
           <div key={lineIndex} className={styles.line}>
-            {line.split("").map((char, charIndex) => {
-              if (char === " ") {
-                return <span key={charIndex} className={styles.space} />;
-              }
+            {line.split(" ").map((word, wordIndex) => (
+              <span key={wordIndex} className={styles['word-span']}>
+                {word.split("").map((char, charIndex) => {
+                  // Total index for character-based stagger in GSAP
+                  const absoluteCharIndex = line.substring(0, line.indexOf(word) + charIndex).length;
+                  
+                  // Hide the final period visually
+                  const isLastPeriod =
+                    lineIndex === lines.length - 1 &&
+                    wordIndex === line.split(" ").length - 1 &&
+                    charIndex === word.length - 1 &&
+                    char === ".";
 
-              // Hide the final period visually
-              const isLastPeriod =
-                lineIndex === lines.length - 1 &&
-                charIndex === line.length - 2 &&
-                char === ".";
-
-              return (
-                <span
-                  key={charIndex}
-                  className={`${styles['char-span']} ${isLastPeriod ? styles.visi : ""}`}
-                >
-                  {char}
-                </span>
-              );
-            })}
+                  return (
+                    <span
+                      key={charIndex}
+                      className={`${styles['char-span']} ${isLastPeriod ? styles.visi : ""}`}
+                    >
+                      {char}
+                    </span>
+                  );
+                })}
+                {/* Add space after word if it's not the last word */}
+                {wordIndex < line.split(" ").length - 1 && (
+                  <span className={styles.space}>&nbsp;</span>
+                )}
+              </span>
+            ))}
             {lineIndex < lines.length - 1 && <br />}
           </div>
         ))}

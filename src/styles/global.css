@@ -25,6 +25,8 @@ html {
 
   scrollbar-color: var(--Yellow-color) var(--secondary-color);
   scrollbar-width: thin;
+  overflow-x: hidden;
+  width: 100vw;
 }
 
 html::-webkit-scrollbar {
@@ -318,4 +320,18 @@ body {
   margin: 0;
   padding: 0;
   background-color: var(--primary-color);
+  overflow-x: hidden;
+  width: 100vw;
+}
+
+/* Global Mobile Typography */
+@media (max-width: 768px) {
+  h1 { font-size: 36px !important; }
+  h2 { font-size: 32px !important; }
+  h3 { font-size: 24px !important; }
+  .big-head-text { font-size: 42px !important; }
+  .big-head-text-white { font-size: 48px !important; }
+  .head-text, .head-text-white { font-size: 32px !important; }
+  p, .para-text, .para-text-white { font-size: 16px !important; }
+  .sub-head-text, .sub-head-text-white { font-size: 22px !important; }
 }

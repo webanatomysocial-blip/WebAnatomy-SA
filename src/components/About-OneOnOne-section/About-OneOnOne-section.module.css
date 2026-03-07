@@ -92,3 +92,42 @@
   margin: 0;
   max-width: 420px;
 }
+
+/* ===============================
+   RESPONSIVE
+=============================== */
+@media (max-width: 768px) {
+  .wa-about-one-on-one-section {
+    padding: 0 20px;
+  }
+
+  .wa-about-one-on-one-total-sticky-container {
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+  }
+
+  .wa-about-one-on-one-left-outer-container,
+  .wa-about-one-on-one-right-outer-container {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .wa-about-one-on-one-left-outer-container {
+    gap: 15px;
+  }
+
+  .para-text-white {
+    max-width: 100%;
+  }
+
+  .wa-about-one-on-one-right-inner-transparent-container {
+    height: 30vh;
+  }
+
+  .wa-about-one-on-one-video {
+    width: 80%;
+    height: 80%;
+  }
+}

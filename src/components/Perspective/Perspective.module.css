@@ -172,6 +172,9 @@
 }
 
 @media (max-width: 768px) {
+    .pers-section {
+        padding: 60px 20px;
+    }
     .pers-header {
         flex-direction: column;
         gap: 20px;
@@ -184,5 +187,30 @@
 
     .pers-cards-wrapper {
         grid-template-columns: 1fr;
+    }
+
+    /* Force hover state on mobile since there is no actual hover */
+    .pers-card-bg {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+    .pers-card::after {
+        opacity: 1;
+    }
+    .pers-card-content {
+        color: #ffffff;
+    }
+    .pers-card-title {
+        transform: translateY(-10px);
+    }
+    .pers-card-hover-text {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    .pers-card-number {
+        color: #ffffff;
+    }
+    .pers-card-line {
+        opacity: 1;
     }
 }

@@ -13,7 +13,7 @@
   width: 100%;
   text-align: left;
   /* height: 100vh; */
-  padding: 80px 5% 0px 10%;
+  padding: 80px 10% 0px 15%; /* Increased padding-left for desktop balance */
   position: sticky;
   top: 100px;
   left: 0;
@@ -37,5 +37,25 @@
 
 .space {
   display: inline-block;
-  width: 0.8em;
+}
+
+.word-span {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .text-container {
+    padding: 60px 8% 0px 8%;
+    top: 80px;
+    text-align: center;
+  }
+
+  .char-span {
+    font-size: 24px;
+  }
+  
+  .space {
+    width: 0.5em;
+  }
 }

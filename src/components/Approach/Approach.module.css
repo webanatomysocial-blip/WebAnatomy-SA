@@ -98,6 +98,9 @@
 
 /* Responsive */
 @media (max-width: 768px) {
+    .principles-section {
+        padding: 60px 20px;
+    }
     .principles-grid {
         grid-template-columns: 1fr;
     }

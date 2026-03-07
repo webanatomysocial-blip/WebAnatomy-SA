@@ -362,16 +362,26 @@
   .wa-main-text,
   .wa-main-text-2,
   .wa-main-text-3 {
-    font-size: 40px;
+    font-size: 36px;
     margin-left: 0 !important;
+    padding: 0 20px;
+    width: 100%;
+  }
+  .wa-content,
+  .wa-content-2,
+  .wa-content-3 {
+    padding: 0 40px;
+    font-size: 16px;
+    width: 100%;
   }
   .videoone,
   .videotwo,
   .videothree {
     width: 200px;
     height: 200px;
+    top: 50px;
   }
   .videotwo {
-    left: -10%;
+    left: 20% !important; /* Center it more on mobile */
   }
 }

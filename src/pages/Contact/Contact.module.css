@@ -222,7 +222,7 @@
 .wa-contact-hero-bg {
   position: absolute;
   inset: 0;
-  background-image: url("../assets/images/contact/contactbg.webp");
+  background-color: #000; /* Fallback since image is missing */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

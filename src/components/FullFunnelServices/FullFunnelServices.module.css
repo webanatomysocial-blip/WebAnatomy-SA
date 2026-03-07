@@ -219,16 +219,30 @@
 }
 
 @media (max-width: 768px) {
+  .full-funnel-services {
+    padding: 60px 5%;
+  }
+
   .services-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .section-title {
-    font-size: 2.5rem;
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+
+  .section-desc {
+    font-size: 14px;
+  }
+
+  .service-card {
+    padding: 25px;
+    height: auto;
+    min-height: 200px;
   }
   
-  .service-card {
-    padding: 30px;
-    min-height: auto;
+  .service-title {
+    font-size: 18px;
   }
 }

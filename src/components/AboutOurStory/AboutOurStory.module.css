@@ -51,3 +51,34 @@
 }
 
 /* Vision & Mission Cards */
+
+@media (max-width: 768px) {
+  .about-our-story {
+    padding: 120px 20px 60px 20px;
+    gap: 30px;
+  }
+  
+  .about-headings {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .about-headings h1,
+  .about-headings p {
+    width: 100%;
+  }
+  
+  .about-headings h1 {
+    font-size: 2.5rem;
+  }
+
+  .about-images {
+    flex-direction: column;
+    margin-top: 30px;
+  }
+
+  .about-images img {
+    height: 300px;
+    width: 100%;
+  }
+}
