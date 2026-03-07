@@ -55,7 +55,7 @@ export default function Testimonials() {
             <div className={styles["testimonials-left-bottom"]}>
               <button className={`${styles["sme-btn"]} white-bg-btn`}>Talk to our SMEs<span className="icon-btn">
                 <BsArrowRight className="icon-inside-btn-1" />
-                <BsArrowRight className="icon-inside-btn-2" />
+                {/* <BsArrowRight className="icon-inside-btn-2" /> */}
               </span></button>
               <div className={styles["ratings-container"]}>
                 <div className={styles["rating-item"]}>

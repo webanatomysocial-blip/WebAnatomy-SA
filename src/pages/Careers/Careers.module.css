@@ -114,7 +114,7 @@
 .wa-careers-perk h3 {
   font-family: var(--font-primary);
   font-size: 18px;
-  font-weight: 400;
+  font-weight: 200;
   margin-bottom: 12px;
 }
 
@@ -406,7 +406,7 @@
 
   font-family: var(--font-primary);
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 200;
 }
 
 .wa-opening-header svg {
@@ -538,7 +538,7 @@
   text-decoration: none;
   font-family: var(--font-secondary);
   font-size: 13px;
-  font-weight: 400;
+  font-weight: 200;
 
   transition: all 0.3s ease;
 }

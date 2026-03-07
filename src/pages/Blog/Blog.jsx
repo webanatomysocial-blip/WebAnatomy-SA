@@ -64,7 +64,7 @@ export default function Blog() {
     const ctx = gsap.context(() => {
       // Hero animation
       const heroEls = heroRef.current.querySelectorAll(
-        `.${styles["bp-hero-animate"]}`
+        `.${styles["bp-hero-animate"]}`,
       );
       gsap.fromTo(
         heroEls,
@@ -76,7 +76,7 @@ export default function Blog() {
           stagger: 0.15,
           ease: "power3.out",
           scrollTrigger: { trigger: heroRef.current, start: "top 85%" },
-        }
+        },
       );
 
       // Cards stagger
@@ -90,7 +90,7 @@ export default function Blog() {
           stagger: 0.1,
           ease: "power2.out",
           scrollTrigger: { trigger: cardsRef.current[0], start: "top 90%" },
-        }
+        },
       );
     }, heroRef);
 
@@ -102,9 +102,9 @@ export default function Blog() {
 
   return (
     <>
-      <AnimatedContent {...animProps}>
-        {/* Hero — split layout */}
-        <section className={styles["bp-hero"]} ref={heroRef}>
+      {/* Hero — split layout */}
+      <section className={styles["bp-hero"]} ref={heroRef}>
+        <AnimatedContent {...animProps}>
           <div className={styles["bp-hero-inner"]}>
             <div className={styles["bp-hero-left"]}>
               <AnimatedLetterHeading
@@ -122,12 +122,12 @@ export default function Blog() {
               </p>
             </div>
           </div>
-        </section>
-      </AnimatedContent>
+        </AnimatedContent>
+      </section>
 
-      <AnimatedContent {...animProps}>
-        {/* Articles */}
-        <section className={styles["bp-articles"]}>
+      {/* Articles */}
+      <section className={styles["bp-articles"]}>
+        <AnimatedContent {...animProps}>
           <div className={styles["bp-articles-inner"]}>
             {/* Featured — image on top, title below */}
             <a
@@ -162,13 +162,11 @@ export default function Blog() {
               ))}
             </div>
           </div>
-        </section>
-      </AnimatedContent>
+        </AnimatedContent>
+      </section>
 
-      <AnimatedContent {...animProps}>
-        {/* FAQ */}
-        <FAQ />
-      </AnimatedContent>
+      {/* FAQ */}
+      <FAQ />
     </>
   );
 }

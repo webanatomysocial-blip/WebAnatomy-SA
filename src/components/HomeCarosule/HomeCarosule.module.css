@@ -111,7 +111,7 @@
   color: var(--primary-color);
   text-decoration: none;
   border-radius: 30px;
-  font-weight: 300;
+  font-weight: 200;
   font-size: 16px;
   transition: var(--transition-medium);
   font-family: var(--font-secondary);
@@ -159,7 +159,7 @@
   background: var(--overlay-cta-bg);
   color: var(--primary-color);
   font-family: var(--font-secondary);
-  font-weight: 300;
+  font-weight: 200;
   z-index: 3;
   transition: transform var(--transition-fast);
 }
@@ -208,7 +208,7 @@
   font-size: 18px;
   transition: color var(--transition-fast);
   font-family: var(--font-secondary);
-  font-weight: 400;
+  font-weight: 200;
 }
 
 .wac-pagination {

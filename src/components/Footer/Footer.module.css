@@ -6,7 +6,7 @@
   background-color: #000;
   color: #fff;
   padding: 80px 100px 40px;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   border-top: 1px solid rgba(255, 255, 255, 0.06);
 }
 
@@ -39,7 +39,7 @@
 /* ── Column titles ── */
 .footer-col-title {
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 200;
   color: #fff;
   margin-bottom: 24px;
 }
@@ -49,7 +49,7 @@
   font-size: 14px;
   line-height: 1.7;
   color: rgba(255, 255, 255, 0.55);
-  font-weight: 400;
+  font-weight: 200;
   max-width: 320px;
   margin-bottom: 24px;
 }
@@ -70,7 +70,10 @@
   justify-content: center;
   color: rgba(255, 255, 255, 0.6);
   font-size: 14px;
-  transition: color 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+  transition:
+    color 0.25s ease,
+    border-color 0.25s ease,
+    background 0.25s ease;
   text-decoration: none;
 }
 
@@ -94,7 +97,7 @@
   color: rgba(255, 255, 255, 0.55);
   text-decoration: none;
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 200;
   transition: color 0.25s ease;
 }
 
@@ -113,12 +116,12 @@
 .footer-copy {
   font-size: 12px;
   color: rgba(255, 255, 255, 0.35);
-  font-weight: 400;
+  font-weight: 200;
 }
 
 .footer-copy strong {
   color: rgba(255, 255, 255, 0.7);
-  font-weight: 600;
+  font-weight: 200;
 }
 
 .footer-bottom-right {
@@ -136,7 +139,7 @@
   color: rgba(255, 255, 255, 0.4);
   text-decoration: none;
   font-size: 12px;
-  font-weight: 400;
+  font-weight: 200;
   transition: color 0.25s ease;
 }
 
@@ -157,7 +160,10 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: color 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+  transition:
+    color 0.25s ease,
+    border-color 0.25s ease,
+    background 0.25s ease;
 }
 
 .footer-scroll-top:hover {
@@ -168,7 +174,9 @@
 
 /* ── Responsive ── */
 @media (max-width: 1024px) {
-  .footer-container { padding: 60px 40px 30px; }
+  .footer-container {
+    padding: 60px 40px 30px;
+  }
   .footer-grid {
     grid-template-columns: 1fr 1fr;
     gap: 40px;
@@ -176,8 +184,20 @@
 }
 
 @media (max-width: 640px) {
-  .footer-container { padding: 50px 24px 24px; }
-  .footer-grid { grid-template-columns: 1fr; gap: 32px; }
-  .footer-bottom { flex-direction: column; align-items: flex-start; gap: 16px; }
-  .footer-bottom-right { flex-direction: row; gap: 16px; }
+  .footer-container {
+    padding: 50px 24px 24px;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .footer-bottom-right {
+    flex-direction: row;
+    gap: 16px;
+  }
 }

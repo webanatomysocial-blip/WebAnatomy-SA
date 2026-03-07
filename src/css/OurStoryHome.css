@@ -1,6 +1,6 @@
 .our-story-home {
-  background-color: #000;
-  color: #fff;
+  background-color: #fff;
+  color: #000;
   padding: 100px 100px;
   min-height: 100vh;
   display: flex;
@@ -12,7 +12,7 @@
 .our-story-main {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  /* align-items: flex-start; */
   gap: 60px;
   max-width: 1400px;
   margin: 0 auto;
@@ -20,23 +20,23 @@
 }
 
 .left-section {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
+    flex-direction: column;
+    width: 50%;
+    display: flex;
+    gap: 30px;
 }
 
 .success-stories-card {
-  background: rgba(255, 255, 255, 0.05);
+  /* background: rgba(0, 0, 0, 0.04); */
   border-radius: 24px;
   padding: 40px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(0, 0, 0);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 350px;
   width: 100%;
-  max-width: 450px;
+  /* max-width: 450px; */
   position: relative;
 }
 
@@ -53,7 +53,7 @@
 
 .story-content .head-text {
   font-size: 1rem;
-  color: #888;
+  color: #555;
   text-transform: uppercase;
   letter-spacing: 2px;
   margin-bottom: 20px;
@@ -62,14 +62,14 @@
 .story-number {
   font-size: 7rem;
   line-height: 1;
-  font-weight: 500;
+  font-weight: 200;
   letter-spacing: -5px;
   margin-bottom: auto;
 }
 
 .story-desc {
   font-size: 1.25rem;
-  color: #fff;
+  color: #222;
   line-height: 1.4;
   margin-top: 20px;
 }
@@ -80,23 +80,27 @@
   top: 40px;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 15px;
+  flex-direction: column;
+  max-height: 300px;
+  height: 100%;
 }
 
 .indicator-line {
-  width: 40px;
-  height: 2px;
-  background: rgba(255, 255, 255, 0.3);
+  width: 2px;
+  height: 80px;
+  background: rgba(0, 0, 0);
 }
 
 .indicator-number {
   font-size: 1.2rem;
-  color: #888;
+  color: #555;
 }
 
 .video-section {
   width: 100%;
-  max-width: 450px;
+  /* max-width: 450px; */
   border-radius: 24px;
   overflow: hidden;
   height: 300px;
@@ -109,16 +113,19 @@
 }
 
 .right-section {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  padding-top: 20px;
+    background-color: rgb(0, 0, 0);
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    display: flex;
+    border-radius: 5px;
+    gap: 30px;
+    padding: 40px;
 }
 
 .head-text-white {
   font-size: 4rem;
-  font-weight: 500;
+  font-weight: 200;
   margin: 0;
   line-height: 1.1;
   letter-spacing: -2px;
@@ -142,9 +149,11 @@
   padding: 18px 40px;
   border-radius: 100px;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 200;
   width: fit-content;
-  transition: transform 0.3s ease, background 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
   margin-top: 20px;
 }
 
@@ -159,17 +168,17 @@
 
 .recognitions-section {
   margin-top: 100px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  /* border-top: 1px solid rgba(0, 0, 0, 0.1); */
   padding-top: 40px;
   width: 100%;
 }
 
 .recognitions-section .head-text {
-  font-size: 0.9rem;
-  font-weight: 400;
-  color: #666;
-  text-transform: uppercase;
-  letter-spacing: 2px;
+  font-size: 1.1rem;
+  font-weight: 200;
+  color: #111;
+  text-transform: none;
+  letter-spacing: 0;
   margin-bottom: 40px;
 }
 
@@ -183,12 +192,11 @@
   justify-content: center;
   align-items: center;
   height: 60px;
-  filter: grayscale(1) invert(0.5);
-  transition: filter 0.3s ease;
+  transition: opacity 0.3s ease;
 }
 
 .recognition-item:hover {
-  filter: grayscale(0) invert(0);
+  opacity: 0.85;
 }
 
 .recognition-logo {
@@ -213,16 +221,18 @@
     flex-direction: column;
     gap: 60px;
   }
-  
+
   .head-text-white {
     font-size: 3rem;
   }
-  
-  .left-section, .right-section {
+
+  .left-section,
+  .right-section {
     max-width: 100%;
   }
-  
-  .success-stories-card, .video-section {
+
+  .success-stories-card,
+  .video-section {
     max-width: 100%;
   }
 }
@@ -231,11 +241,11 @@
   .our-story-home {
     padding: 60px 20px;
   }
-  
+
   .story-number {
     font-size: 5rem;
   }
-  
+
   .head-text-white {
     font-size: 2.5rem;
   }

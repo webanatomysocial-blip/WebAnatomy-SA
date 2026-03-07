@@ -108,9 +108,9 @@ export default function OurStoryHomePage() {
         </div>
       </div>
 
-      {/* Bottom Section - Recognitions - Now using Swiper */}
+      {/* Bottom Section - Logos */}
       <div className="recognitions-section">
-        <h3 className="head-text">Recognitions</h3>
+        <h3 className="head-text" style={{ textAlign: "center" }}>Collaborating with 50+ Industry Leaders</h3>
 
         <div className="recognitions-carousel">
           <Swiper

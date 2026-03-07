@@ -46,7 +46,7 @@
 
 .expertise-title {
   font-size: 1.2rem;
-  font-weight: 400;
+  font-weight: 200;
   color: #888;
   margin: 0;
 }
@@ -60,7 +60,7 @@
 .expertise-main-number {
   font-size: 8rem;
   line-height: 1;
-  font-weight: 500;
+  font-weight: 200;
   letter-spacing: -5px;
 }
 
@@ -95,7 +95,7 @@
 
 .expertise-sub-label {
   font-size: 2rem;
-  font-weight: 500;
+  font-weight: 200;
   margin: 0;
   line-height: 1.2;
 }
@@ -120,11 +120,12 @@
   flex-direction: column;
   gap: 30px;
   padding-top: 40px;
+  background-color: black !important;
 }
 
 .our-story-heading {
   font-size: 4.5rem;
-  font-weight: 500;
+  font-weight: 200;
   margin: 0;
   line-height: 1.1;
   letter-spacing: -2px;
@@ -148,7 +149,7 @@
   padding: 18px 40px;
   border-radius: 100px;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 200;
   width: fit-content;
   transition: transform 0.3s ease;
   margin-top: 20px;
@@ -164,13 +165,13 @@
 
 .recognitions-section {
   margin-top: 100px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  /* border-top: 1px solid rgba(255, 255, 255, 0.1); */
   padding-top: 40px;
 }
 
 .recognitions-title {
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 200;
   color: #666;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -181,7 +182,7 @@
     flex-direction: column;
     gap: 60px;
   }
-  
+
   .our-story-heading {
     font-size: 3.5rem;
   }
@@ -191,11 +192,11 @@
   .expertise-main-number {
     font-size: 6rem;
   }
-  
+
   .our-story-heading {
     font-size: 2.8rem;
   }
-  
+
   .our-story-home {
     padding: 60px 5%;
   }

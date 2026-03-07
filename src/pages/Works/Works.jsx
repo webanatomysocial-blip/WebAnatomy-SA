@@ -113,10 +113,11 @@ export default function Works() {
 
   return (
     <>
-      <AnimatedContent {...animProps}>
         {/* Hero */}
         <section className={styles["wp-hero"]} ref={heroRef}>
           <div className={styles["wp-hero-inner"]}>
+             <AnimatedContent {...animProps}>
+
             <div className={styles["wp-hero-left"]}>
               <span
                 className={`${styles["wp-hero-badge"]} ${styles["wp-hero-animate"]}`}
@@ -130,6 +131,9 @@ export default function Works() {
                 className={`${styles["wp-hero-title"]} ${styles["wp-hero-animate"]}`}
               />
             </div>
+                          
+             </AnimatedContent>
+                        <AnimatedContent {...animProps}>
             <div
               className={`${styles["wp-hero-right"]} ${styles["wp-hero-animate"]}`}
             >
@@ -138,14 +142,15 @@ export default function Works() {
                 impression and drive results.
               </p>
             </div>
+            </AnimatedContent>
           </div>
         </section>
-      </AnimatedContent>
 
-      <AnimatedContent {...animProps}>
+
         {/* Projects grid */}
         <section className={styles["wp-projects"]}>
           <div className={styles["wp-projects-inner"]}>
+                  <AnimatedContent {...animProps}>
             <div className={styles["wp-grid"]}>
               {projectsData.map((project, index) => (
                 <a
@@ -176,14 +181,14 @@ export default function Works() {
                 </a>
               ))}
             </div>
+            </AnimatedContent>
           </div>
         </section>
-      </AnimatedContent>
 
-      <AnimatedContent {...animProps}>
+
+   
         {/* FAQ */}
         <FAQ />
-      </AnimatedContent>
     </>
   );
 }

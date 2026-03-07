@@ -61,7 +61,7 @@ html::-webkit-scrollbar-thumb:hover {
 @font-face {
   font-family: "Poppins";
   src: url("../fonts/Poppins-Regular.ttf") format("truetype");
-  font-weight: 400;
+  font-weight: 200;
   font-style: normal;
   font-display: swap;
 }
@@ -70,7 +70,7 @@ html::-webkit-scrollbar-thumb:hover {
 @font-face {
   font-family: "Poppins";
   src: url("../fonts/Poppins-Medium.ttf") format("truetype");
-  font-weight: 500;
+  font-weight: 200;
   font-style: normal;
   font-display: swap;
 }
@@ -79,7 +79,7 @@ html::-webkit-scrollbar-thumb:hover {
 @font-face {
   font-family: "Poppins";
   src: url("../fonts/Poppins-SemiBold.ttf") format("truetype");
-  font-weight: 600;
+  font-weight: 200;
   font-style: normal;
   font-display: swap;
 }
@@ -88,7 +88,7 @@ html::-webkit-scrollbar-thumb:hover {
 @font-face {
   font-family: "Poppins";
   src: url("../fonts/Poppins-Bold.ttf") format("truetype");
-  font-weight: 700;
+  font-weight: 200;
   font-style: normal;
   font-display: swap;
 }
@@ -99,6 +99,7 @@ h1 {
   padding: 0;
   line-height: 1.2em;
   letter-spacing: 0px;
+  font-weight: 200;
   font-family: var(--font-primary);
 }
 
@@ -109,6 +110,7 @@ h2 {
   line-height: 1.2em;
   letter-spacing: 0px;
   font-family: var(--font-primary);
+  font-weight: 200;
 }
 
 h3 {
@@ -128,6 +130,7 @@ h6 {
   line-height: 1.2em;
   letter-spacing: 0px;
   font-family: var(--font-primary);
+  font-weight: 200;
 }
 
 p {
@@ -139,33 +142,33 @@ p {
 .big-head-text {
   font-size: 80px;
   font-family: var(--font-primary);
-  font-weight: 500;
+  font-weight: 200;
   color: var(--secondary-color);
 }
 .big-head-text-white {
   font-size: 140px;
   font-family: var(--font-primary);
-  font-weight: 500;
+  font-weight: 200;
   color: var(--primary-color);
 }
 .head-text {
   font-size: 40px; /* Aligned with Normal Heading 40px */
   font-family: var(--font-primary);
-  font-weight: 500;
+  font-weight: 200;
   color: var(--secondary-color);
 }
 
 .head-text-white {
   font-size: 40px; /* Aligned with Normal Heading 40px */
   font-family: var(--font-primary);
-  font-weight: 500;
+  font-weight: 200;
   color: var(--primary-color);
 }
 
 .para-text {
   font-size: 18px;
   font-family: var(--font-secondary);
-  font-weight: 300;
+  font-weight: 200;
   line-height: 1.4em;
   color: var(--progress-active-bg);
 }
@@ -173,7 +176,7 @@ p {
 .para-text-white {
   font-size: 18px;
   font-family: var(--font-secondary);
-  font-weight: 300;
+  font-weight: 200;
   line-height: 1.4em;
   color: var(--primary-color);
 }
@@ -181,7 +184,7 @@ p {
 .sub-head-text {
   font-size: 26px;
   font-family: var(--font-primary);
-  font-weight: 300;
+  font-weight: 200;
   line-height: 1.4em;
   color: var(--secondary-color);
 }
@@ -189,7 +192,7 @@ p {
 .sub-head-text-white {
   font-size: 26px;
   font-family: var(--font-primary);
-  font-weight: 300;
+  font-weight: 200;
   line-height: 1.4em;
   color: var(--primary-color);
 }
@@ -197,7 +200,7 @@ p {
 .sub-para-text {
   font-size: 16px;
   font-family: var(--font-secondary);
-  font-weight: 300;
+  font-weight: 200;
   line-height: 1.4em;
   color: var(--progress-active-bg);
   padding-bottom: 20px;
@@ -206,7 +209,7 @@ p {
 .sub-para-text-white {
   font-size: 16px;
   font-family: var(--font-secondary);
-  font-weight: 300;
+  font-weight: 200;
   line-height: 1.4em;
   color: var(--primary-color);
 }
