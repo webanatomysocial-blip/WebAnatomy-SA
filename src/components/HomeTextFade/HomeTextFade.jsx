@@ -1,6 +1,6 @@
 // src/components/HomeTextFade.jsx
 
-import { useEffect, useRef } from "react";
+import { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import styles from "./HomeTextFade.module.css";
@@ -10,18 +10,20 @@ gsap.registerPlugin(ScrollTrigger);
 const HomeTextFade = () => {
   const sectionRef = useRef(null);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: sectionRef.current,
-        start: "top 5%",
-        end: "bottom bottom",
+        start: "top top",
+        end: "+=1000",
         scrub: 0.1,
+        pin: true,
+        anticipatePin: 1,
       },
     });
 
     // Animate ALL spans from gray to white, staggered
-    tl.to(`.${styles['char-span']}`, {
+    tl.to(`.${styles["char-span"]}`, {
       color: "white",
       duration: 1,
       stagger: 0.1,
@@ -42,16 +44,19 @@ And our mission is to imagine the possibilities.`;
   const lines = text.split("\n");
 
   return (
-    <section className={styles['Text-Section']} ref={sectionRef}>
-      <div className={styles['text-container']}>
+    <section className={styles["Text-Section"]} ref={sectionRef}>
+      <div className={styles["text-container"]}>
         {lines.map((line, lineIndex) => (
           <div key={lineIndex} className={styles.line}>
             {line.split(" ").map((word, wordIndex) => (
-              <span key={wordIndex} className={styles['word-span']}>
+              <span key={wordIndex} className={styles["word-span"]}>
                 {word.split("").map((char, charIndex) => {
                   // Total index for character-based stagger in GSAP
-                  const absoluteCharIndex = line.substring(0, line.indexOf(word) + charIndex).length;
-                  
+                  const absoluteCharIndex = line.substring(
+                    0,
+                    line.indexOf(word) + charIndex,
+                  ).length;
+
                   // Hide the final period visually
                   const isLastPeriod =
                     lineIndex === lines.length - 1 &&
@@ -62,7 +67,7 @@ And our mission is to imagine the possibilities.`;
                   return (
                     <span
                       key={charIndex}
-                      className={`${styles['char-span']} ${isLastPeriod ? styles.visi : ""}`}
+                      className={`${styles["char-span"]} ${isLastPeriod ? styles.visi : ""}`}
                     >
                       {char}
                     </span>

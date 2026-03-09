@@ -1,11 +1,10 @@
 .wa-about-one-on-one-section {
   padding: 0px 100px 0px 100px;
-  height: 400vh;
+  /* height: 400vh; */
   background-color: black;
 }
 .wa-about-one-on-one-total-sticky-container {
-  position: sticky;
-  top: 0px;
+  position: relative;
   left: 0;
   right: 0;
   z-index: 1;

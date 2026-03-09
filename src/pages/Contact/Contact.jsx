@@ -136,13 +136,8 @@ const Contact = () => {
                   alt="India"
                 />
                 <div className={styles["wa-location-meta"]}>
-                  <strong>🇮🇳 INDIA</strong>
-                  <p>
-                    2nd Floor, Vision Arcade, 202, Jai Hind Gandhi Rd, Cyber
-                    Hills Colony, VIP Hills, Madhapur, Hyderabad, Telangana
-                    500081.
-                  </p>
-                  <a href="https://maps.google.com">Google Maps</a>
+                  <p>244 Brooks Street, Brooklyn, Pretoria</p>
+                  {/* <a href="https://maps.google.com">Google Maps</a> */}
                 </div>
               </div>
 
@@ -152,12 +147,12 @@ const Contact = () => {
                   <InfoCard
                     icon={<GoCommentDiscussion />}
                     title="General Enquiry"
-                    value="+91 9999999999"
+                    value=" +27 073 335 6100"
                   />
                   <InfoCard
                     icon={<GoPerson />}
                     title="Sales Enquiry"
-                    value="+91 9999999999"
+                    value="+27 073 335 6100"
                   />
                   <InfoCard
                     icon={<GoMail />}
@@ -167,7 +162,7 @@ const Contact = () => {
                   <InfoCard
                     icon={<GoDeviceMobile />}
                     title="HR Enquiry"
-                    value="+91 9999999999"
+                    value="+27 073 335 6100"
                   />
                 </div>
               </div>
@@ -180,8 +175,8 @@ const Contact = () => {
 };
 
 const InfoCard = ({ icon, title, value }) => (
-  <div className={styles['wa-info-card']}>
-    <div className={styles['wa-info-icon']}>{icon}</div>
+  <div className={styles["wa-info-card"]}>
+    <div className={styles["wa-info-icon"]}>{icon}</div>
     <div>
       <span>{title}</span>
       <strong>{value}</strong>

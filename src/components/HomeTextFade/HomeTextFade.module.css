@@ -2,7 +2,7 @@
 
 .Text-Section {
   background-color: black;
-  min-height: 300vh;
+  min-height: 100vh;
   display: flex;
   align-items: start;
   justify-content: center;
@@ -14,8 +14,7 @@
   text-align: left;
   /* height: 100vh; */
   padding: 80px 10% 0px 15%; /* Increased padding-left for desktop balance */
-  position: sticky;
-  top: 100px;
+  position: relative;
   left: 0;
 }
 
@@ -54,7 +53,7 @@
   .char-span {
     font-size: 24px;
   }
-  
+
   .space {
     width: 0.5em;
   }

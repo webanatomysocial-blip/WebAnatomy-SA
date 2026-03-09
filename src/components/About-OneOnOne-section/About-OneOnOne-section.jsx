@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import styles from "./About-OneOnOne-section.module.css";
@@ -12,7 +12,7 @@ export default function AboutOneOnOneSection() {
   // Refs for the individual items
   const itemsRef = useRef([]);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const ctx = gsap.context(() => {
       const items = itemsRef.current;
       if (!items || items.length === 0) return;
@@ -29,33 +29,33 @@ export default function AboutOneOnOneSection() {
         scrollTrigger: {
           trigger: sectionRef.current,
           start: "top top",
-          end: "bottom bottom",
+          end: "+=3000",
           scrub: 1, // Smooth scrubbing
+          pin: true,
+          anticipatePin: 1,
           // markers: true,
         },
       });
 
       // 3. Sequence
-      // For each item (except the last one), animate it out and the next one in
       items.forEach((item, index) => {
         if (index < items.length - 1) {
           const nextItem = items[index + 1];
 
-          // Add a "step" to the timeline
           tl.to(item, {
-            yPercent: -100, // Move current up
-            opacity: 0, // Fade out
+            yPercent: -100,
+            opacity: 0,
             duration: 1,
             ease: "power2.inOut",
           }).to(
             nextItem,
             {
-              yPercent: 0, // Move next up (from 100 to 0)
-              opacity: 1, // Fade in
+              yPercent: 0,
+              opacity: 1,
               duration: 1,
               ease: "power2.inOut",
             },
-            "<"
+            "<",
           );
         }
       });
@@ -76,8 +76,11 @@ export default function AboutOneOnOneSection() {
 
   return (
     <>
-      <section ref={sectionRef} className={styles['wa-about-one-on-one-section']}>
-        <div className={styles['wa-about-one-on-one-total-sticky-container']}>
+      <section
+        ref={sectionRef}
+        className={styles["wa-about-one-on-one-section"]}
+      >
+        <div className={styles["wa-about-one-on-one-total-sticky-container"]}>
           {/* <video
             src={video}
             autoPlay
@@ -85,46 +88,60 @@ export default function AboutOneOnOneSection() {
             muted
             className={styles['wa-about-one-on-one-video']}
           ></video> */}
-          <div className={styles['wa-about-one-on-one-left-outer-container']}>
-            <p className={styles['head-text-white']}>
+          <div className={styles["wa-about-one-on-one-left-outer-container"]}>
+            <p className={styles["head-text-white"]}>
               Big Dreams, <br /> Bigger Numbers
             </p>
-            <p className={styles['para-text-white']}>
+            <p className={styles["para-text-white"]}>
               We are moving ahead with relentless energy to achieve amazing
               results that speak volumes. We don't intend to slow down either!
             </p>
           </div>
 
-          <div className={styles['wa-about-one-on-one-right-outer-container']}>
+          <div className={styles["wa-about-one-on-one-right-outer-container"]}>
             <div
               ref={containerRef}
-              className={styles['wa-about-one-on-one-right-inner-transparent-container']}
+              className={
+                styles["wa-about-one-on-one-right-inner-transparent-container"]
+              }
             >
               {/* Item 1 */}
               <div
                 ref={addToRefs}
-                className={styles['wa-about-one-on-one-right-inner-transparent-container-first-inner-container']}
+                className={
+                  styles[
+                    "wa-about-one-on-one-right-inner-transparent-container-first-inner-container"
+                  ]
+                }
               >
-                <p className={styles['big-head-text-white']}>800+</p>
-                <p className={styles['para-text-white']}>We are moving ahead</p>
+                <p className={styles["big-head-text-white"]}>800+</p>
+                <p className={styles["para-text-white"]}>We are moving ahead</p>
               </div>
 
               {/* Item 2 */}
               <div
                 ref={addToRefs}
-                className={styles['wa-about-one-on-one-right-inner-transparent-container-first-inner-container']}
+                className={
+                  styles[
+                    "wa-about-one-on-one-right-inner-transparent-container-first-inner-container"
+                  ]
+                }
               >
-                <p className={styles['big-head-text-white']}>900+</p>
-                <p className={styles['para-text-white']}>We are moving ahead</p>
+                <p className={styles["big-head-text-white"]}>900+</p>
+                <p className={styles["para-text-white"]}>We are moving ahead</p>
               </div>
 
               {/* Item 3 */}
               <div
                 ref={addToRefs}
-                className={styles['wa-about-one-on-one-right-inner-transparent-container-first-inner-container']}
+                className={
+                  styles[
+                    "wa-about-one-on-one-right-inner-transparent-container-first-inner-container"
+                  ]
+                }
               >
-                <p className={styles['big-head-text-white']}>1000+</p>
-                <p className={styles['para-text-white']}>We are moving ahead</p>
+                <p className={styles["big-head-text-white"]}>1000+</p>
+                <p className={styles["para-text-white"]}>We are moving ahead</p>
               </div>
             </div>
           </div>
