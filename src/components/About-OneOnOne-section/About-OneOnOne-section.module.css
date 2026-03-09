@@ -119,7 +119,7 @@
   }
 
   .big-head-text-white {
-    font-size: 5.5rem; /* More impactful numbers */
+    font-size: 1.5rem !important; /* More impactful numbers */
   }
 
   .wa-about-one-on-one-left-outer-container {
