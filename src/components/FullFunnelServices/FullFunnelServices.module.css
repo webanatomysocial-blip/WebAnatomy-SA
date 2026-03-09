@@ -1,6 +1,6 @@
 .full-funnel-services {
   background-color: #000;
-  padding: 100px 5%;
+  padding: 100px 0;
   position: relative;
   overflow: hidden;
   color: #fff;
@@ -10,8 +10,9 @@
 .services-container {
   position: relative;
   z-index: 2;
-  max-width: 1300px; /* Snugger container for proximity */
+  width: 100%;
   margin: 0 auto;
+  padding: 0 100px;
 }
 
 .services-header {
@@ -209,7 +210,10 @@
 
 @media (max-width: 1024px) {
   .full-funnel-services {
-    padding: 80px 40px;
+    padding: 80px 0;
+  }
+  .services-container {
+    padding: 0 40px;
   }
   
   .services-header {
@@ -220,7 +224,10 @@
 
 @media (max-width: 768px) {
   .full-funnel-services {
-    padding: 60px 5%;
+    padding: 60px 0;
+  }
+  .services-container {
+    padding: 0 20px;
   }
 
   .services-grid {

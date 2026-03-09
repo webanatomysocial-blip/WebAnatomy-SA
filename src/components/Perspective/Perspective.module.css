@@ -1,12 +1,12 @@
 .pers-section {
     background-color: #ffffff;
-    padding: 100px 5%;
+    padding: 100px 40px;
     font-family: inherit;
     min-height: 100vh;
 }
 
 .pers-container {
-    max-width: 1400px;
+    max-width: 1300px;
     margin: 0 auto;
     width: 100%;
 }

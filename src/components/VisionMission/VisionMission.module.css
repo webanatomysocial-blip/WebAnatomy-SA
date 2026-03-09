@@ -1,6 +1,6 @@
 .vision-mission-section {
   background-color: black;
-  padding: 100px 5%;
+  padding: 100px 100px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -13,7 +13,8 @@
 .vision-mission-container {
   display: flex;
   gap: 30px;
-  max-width: 1400px;
+  max-width: 1300px;
+  margin: 0 auto;
   width: 100%;
   box-sizing: border-box;
 }
@@ -100,7 +101,7 @@
 /* Responsive */
 @media (max-width: 768px) {
   .vision-mission-section {
-    padding: 40px 15px;
+    padding: 40px 20px;
     width: 100vw;
     overflow: hidden;
     box-sizing: border-box;

@@ -1,5 +1,5 @@
 .insights-section {
-  padding: 100px;
+  padding: 100px 40px;
   background-color: var(--grey); /* Light grey background from screenshot */
   display: flex;
   justify-content: center;
@@ -7,7 +7,7 @@
 
 .insights-container {
   width: 100%;
-  max-width: 1400px; /* Aligns with other sections */
+  max-width: 1300px; /* Aligns with other sections */
   display: flex;
   flex-direction: column;
   gap: 50px;

@@ -1,6 +1,5 @@
 .wa-about-one-on-one-section {
-  padding: 0px 100px 0px 100px;
-  /* height: 400vh; */
+  padding: 0px 100px;
   background-color: black;
 }
 .wa-about-one-on-one-total-sticky-container {
@@ -12,6 +11,8 @@
   justify-content: space-between;
   align-items: center;
   height: 100vh;
+  max-width: 1300px;
+  margin: 0 auto;
 }
 .wa-about-one-on-one-left-outer-container {
   width: 40%;

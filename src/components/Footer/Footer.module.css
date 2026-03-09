@@ -5,14 +5,15 @@
 .footer-container {
   background-color: #000;
   color: #fff;
-  padding: 80px 100px 40px;
+  padding: 80px 0 40px;
   font-family: "Poppins", sans-serif;
   border-top: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .footer-wrapper {
-  max-width: 1300px;
+  width: 100%;
   margin: 0 auto;
+  padding: 0 100px;
 }
 
 /* ── Logo ── */
@@ -175,7 +176,10 @@
 /* ── Responsive ── */
 @media (max-width: 1024px) {
   .footer-container {
-    padding: 60px 40px 30px;
+    padding: 60px 0 30px;
+  }
+  .footer-wrapper {
+    padding: 0 40px;
   }
   .footer-grid {
     grid-template-columns: 1fr 1fr;
@@ -185,7 +189,10 @@
 
 @media (max-width: 640px) {
   .footer-container {
-    padding: 50px 24px 24px;
+    padding: 50px 0 24px;
+  }
+  .footer-wrapper {
+    padding: 0 24px;
   }
 
   .footer-logo {

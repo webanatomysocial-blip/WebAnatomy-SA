@@ -1,7 +1,7 @@
 .our-story-home {
   background-color: #000;
   color: #fff;
-  padding: 100px 5%;
+  padding: 100px 0;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -14,8 +14,9 @@
   justify-content: space-between;
   align-items: flex-start;
   gap: 60px;
-  max-width: 1400px;
+  width: 100%;
   margin: 0 auto;
+  padding: 0 100px;
 }
 
 .left-section {
@@ -198,6 +199,9 @@
   }
 
   .our-story-home {
-    padding: 60px 5%;
+    padding: 60px 0;
+  }
+  .our-story-main {
+    padding: 0 20px;
   }
 }

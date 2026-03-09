@@ -1,7 +1,7 @@
 /* src/css/OurServices.css */
 
 .our-services {
-  padding: 100px;
+  padding: 100px calc(max(40px, calc((100vw - 1300px) / 2 + 40px)));
   background-color: var(--grey);
   display: flex;
   flex-direction: column;
@@ -75,6 +75,6 @@
   }
 
   .our-services {
-    padding: 50px 5%;
+    padding: 50px 20px;
   }
 }

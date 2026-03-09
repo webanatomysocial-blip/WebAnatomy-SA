@@ -16,7 +16,10 @@
   position: absolute;
   top: 0;
   left: 0;
+  right: 0;
+  margin: 0 auto;
   width: 100%;
+  padding: 0 100px;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -134,7 +137,10 @@
   position: absolute;
   top: 0;
   left: 0;
+  right: 0;
+  margin: 0 auto;
   width: 100%;
+  padding: 0 100px;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -249,7 +255,10 @@
   position: absolute;
   top: 0;
   left: 0;
+  right: 0;
+  margin: 0 auto;
   width: 100%;
+  padding: 0 100px;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -370,20 +379,17 @@
   .wa-main-text-3 {
     font-size: 36px;
     margin-left: -60px !important;
-    padding: 0 20px;
     width: 100%;
     line-height: 2em;
   }
   .wa-main-text-2{
     font-size: 36px;
     margin-left: 40px !important;
-    padding: 0 20px;
     width: 100%;
   }
   .wa-content,
   .wa-content-2,
   .wa-content-3 {
-    padding: 0 40px;
     font-size: 16px;
     width: 100%;
   }
@@ -396,5 +402,11 @@
   }
   .videotwo {
     left: 40% !important; /* Center it more on mobile */
+  }
+
+  .animation-section,
+  .animation-section-2,
+  .animation-section-3 {
+    padding: 0 20px;
   }
 }

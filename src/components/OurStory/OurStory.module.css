@@ -4,7 +4,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 100px;
+  padding: 100px calc(max(40px, calc((100vw - 1300px) / 2 + 40px)));
   background-color: rgb(0, 0, 0);
   color: white;
   height: 100vh;
@@ -54,7 +54,7 @@
 @media (max-width: 768px) {
   .our-story {
     flex-direction: column;
-    padding: 50px 5%;
+    padding: 50px 20px;
   }
 
   .our-story-content {
