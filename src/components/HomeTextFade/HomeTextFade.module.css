@@ -16,6 +16,7 @@
   padding: 80px 10% 0px 15%; /* Increased padding-left for desktop balance */
   position: relative;
   left: 0;
+  top:24%;
 }
 
 .line {

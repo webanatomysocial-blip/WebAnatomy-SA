@@ -23,6 +23,14 @@ const recognitionLogos = [
   img4,
   img6,
   img9,
+  img3,
+  img4,
+  img6,
+  img9,
+  img3,
+  img4,
+  img6,
+  img9,
 ];
 
 const successStoriesData = [
