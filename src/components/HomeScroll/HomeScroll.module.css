@@ -47,6 +47,7 @@
   margin-left: -70px;
   width: 100%;
   z-index: 2; /* Below video usually? snippet had z-index -1 on video */
+  line-height: 1.3em;
 }
 
 .wa-main-text span {
@@ -79,6 +80,7 @@
   justify-content: center;
   flex-direction: column;
   margin-top: 30px;
+  line-height: 1.3em;
 }
 
 .wa-content .line {
@@ -162,6 +164,7 @@
   margin-left: 70px;
   width: 100%;
   z-index: 2;
+  line-height: 1.3em;
 }
 
 .wa-main-text-2 span {
@@ -192,6 +195,7 @@
   justify-content: center;
   flex-direction: column;
   margin-top: 30px;
+  line-height: 1.3em;
 }
 
 .wa-content-2 .line-2 {
@@ -275,6 +279,7 @@
   margin-left: -70px;
   width: 100%;
   z-index: 2;
+  line-height: 1.3em;
 }
 
 .wa-main-text-3 span {
@@ -304,6 +309,7 @@
   justify-content: center;
   flex-direction: column;
   margin-top: 30px;
+  line-height: 1.3em;
 }
 
 .wa-content-3 .line-3 {
@@ -363,7 +369,14 @@
   .wa-main-text-2,
   .wa-main-text-3 {
     font-size: 36px;
-    margin-left: 0 !important;
+    margin-left: -60px !important;
+    padding: 0 20px;
+    width: 100%;
+    line-height: 2em;
+  }
+  .wa-main-text-2{
+    font-size: 36px;
+    margin-left: 40px !important;
     padding: 0 20px;
     width: 100%;
   }
@@ -379,9 +392,9 @@
   .videothree {
     width: 200px;
     height: 200px;
-    top: 50px;
+    top: 90px;
   }
   .videotwo {
-    left: 20% !important; /* Center it more on mobile */
+    left: 40% !important; /* Center it more on mobile */
   }
 }

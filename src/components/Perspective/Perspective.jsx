@@ -20,7 +20,7 @@ const Pers = () => {
                     <div className={styles["pers-cards-wrapper"]}>
                         {/* Card 1 */}
                         <div className={styles["pers-card"]}>
-                            <img src={img1} alt="Human x Machine" className={styles["pers-card-bg"]} />
+                            <img src="src/assets/images/about-page/our-story/93420.jpg" alt="Human x Machine" className={styles["pers-card-bg"]} />
                             <div className={styles["pers-card-content"]}>
                                 <h3 className={styles["pers-card-title"]}>Human ×<br />Machine</h3>
                                 <p className={styles["pers-card-hover-text"]}>

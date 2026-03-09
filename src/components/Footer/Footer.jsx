@@ -76,11 +76,10 @@ const Footer = () => {
                 <a href="tel:+270733356100"> +27 073 335 6100</a>
               </li>
               <li>
-                <a href="mailto:hello@webanatomy.in">hello@webanatomy.in</a>
+                <a href="mailto:hello@businessanatomy.co.sa">hello@businessanatomy.co.sa</a>
               </li>
             </ul>
           </div>
-
           {/* Others */}
           <div className={styles["footer-col"]}>
             <h4 className={styles["footer-col-title"]}>Others</h4>

@@ -54,6 +54,7 @@
 
 .service-content h3 {
   margin-bottom: 10px;
+  line-height: 1.3em;
 }
 .ourservices-btn-container {
   display: flex;

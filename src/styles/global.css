@@ -100,7 +100,7 @@ h1 {
   font-size: 60px;
   margin: 0;
   padding: 0;
-  line-height: 1.2em;
+  line-height: 1.3em;
   letter-spacing: 0px;
   font-weight: 200;
   font-family: var(--font-primary);
@@ -110,7 +110,7 @@ h2 {
   font-size: 40px;
   margin: 0;
   padding: 0;
-  line-height: 1.2em;
+  line-height: 1.3em;
   letter-spacing: 0px;
   font-family: var(--font-primary);
   font-weight: 200;
@@ -120,7 +120,7 @@ h3 {
   font-size: 24px;
   margin: 0;
   padding: 0;
-  line-height: 1.2em;
+  line-height: 1.3em;
   letter-spacing: 0px;
   font-family: var(--font-primary);
 }
@@ -130,7 +130,7 @@ h5,
 h6 {
   margin: 0;
   padding: 0;
-  line-height: 1.2em;
+  line-height: 1.3em;
   letter-spacing: 0px;
   font-family: var(--font-primary);
   font-weight: 200;
@@ -139,7 +139,7 @@ h6 {
 p {
   font-size: 18px;
   font-family: var(--font-secondary);
-  line-height: 1.4em;
+  line-height: 1.3em;
 }
 
 .big-head-text {
@@ -172,7 +172,7 @@ p {
   font-size: 18px;
   font-family: var(--font-secondary);
   font-weight: 200;
-  line-height: 1.4em;
+  line-height: 1.3em;
   color: var(--progress-active-bg);
 }
 
@@ -180,7 +180,7 @@ p {
   font-size: 18px;
   font-family: var(--font-secondary);
   font-weight: 200;
-  line-height: 1.4em;
+  line-height: 1.3em;
   color: var(--primary-color);
 }
 
@@ -188,7 +188,7 @@ p {
   font-size: 26px;
   font-family: var(--font-primary);
   font-weight: 200;
-  line-height: 1.4em;
+  line-height: 1.3em;
   color: var(--secondary-color);
 }
 
@@ -196,7 +196,7 @@ p {
   font-size: 26px;
   font-family: var(--font-primary);
   font-weight: 200;
-  line-height: 1.4em;
+  line-height: 1.3em;
   color: var(--primary-color);
 }
 
@@ -204,7 +204,7 @@ p {
   font-size: 16px;
   font-family: var(--font-secondary);
   font-weight: 200;
-  line-height: 1.4em;
+  line-height: 1.3em;
   color: var(--progress-active-bg);
   padding-bottom: 20px;
 }
@@ -213,7 +213,7 @@ p {
   font-size: 16px;
   font-family: var(--font-secondary);
   font-weight: 200;
-  line-height: 1.4em;
+  line-height: 1.3em;
   color: var(--primary-color);
 }
 

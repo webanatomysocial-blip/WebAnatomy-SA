@@ -24,7 +24,7 @@
 .projects-header .header-left .section-title {
   font-size: 44px;
   font-weight: 200;
-  line-height: 48px;
+  line-height: 1.3em;
   letter-spacing: -1.5px;
 }
 
@@ -39,7 +39,7 @@
 .projects-header .section-desc {
   font-size: 16px;
   color: #b5b5b5;
-  line-height: 1.6;
+  line-height: 1.3em;
   text-align: left;
 }
 
@@ -111,7 +111,7 @@
   font-size: 22px;
   font-weight: 200;
   letter-spacing: -0.66px;
-  line-height: 26.4px;
+  line-height: 1.3em;
   transition: opacity 0.35s ease;
 }
 

@@ -27,7 +27,7 @@
 .blogroll-title {
   font-size: 44px;
   font-weight: 200;
-  line-height: 1.08;
+  line-height: 1.3em;
   letter-spacing: -1.5px;
 }
 
@@ -124,7 +124,7 @@
 .blog-card-title {
   font-size: 17px;
   font-weight: 200;
-  line-height: 1.45;
+  line-height: 1.3em;
   letter-spacing: -0.3px;
   color: #fff;
   flex: 1;

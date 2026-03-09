@@ -6,6 +6,7 @@ import { GoArrowUpRight } from "react-icons/go";
 import { HiOutlineMenuAlt3, HiX } from "react-icons/hi";
 
 const navLinks = [
+  { label: "Home", path: "/" },
   { label: "About", path: "/about" },
   { label: "Services", path: "/services" },
   { label: "Work", path: "/works" },

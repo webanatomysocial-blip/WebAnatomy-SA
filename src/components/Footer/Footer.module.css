@@ -47,7 +47,7 @@
 /* ── Headquarters ── */
 .footer-address {
   font-size: 14px;
-  line-height: 1.7;
+  line-height: 1.3em;
   color: rgba(255, 255, 255, 0.55);
   font-weight: 200;
   max-width: 320px;
@@ -187,17 +187,50 @@
   .footer-container {
     padding: 50px 24px 24px;
   }
-  .footer-grid {
-    grid-template-columns: 1fr;
-    gap: 32px;
+
+  .footer-logo {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 40px;
   }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px 20px;
+    text-align: left;
+  }
+
+  .footer-col-hq {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-address {
+    max-width: none;
+  }
+
+  .footer-social {
+    justify-content: flex-start;
+  }
+
   .footer-bottom {
     flex-direction: column;
     align-items: flex-start;
-    gap: 16px;
+    text-align: left;
+    gap: 20px;
   }
+
   .footer-bottom-right {
-    flex-direction: row;
-    gap: 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .footer-bottom-links {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
   }
 }

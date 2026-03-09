@@ -18,7 +18,7 @@
 .principles-headings h1 {
     font-size: 3rem;
     font-weight: 200;
-    line-height: 1.2;
+    line-height: 1.3em;
     margin: 0;
     letter-spacing: -0.02em;
 }
@@ -91,7 +91,7 @@
 
 .principle-card p {
     font-size: 1rem;
-    line-height: 1.6;
+    line-height: 1.3em;
     color: #666;
     margin: 0;
 }

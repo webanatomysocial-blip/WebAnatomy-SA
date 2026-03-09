@@ -27,7 +27,7 @@
 
 .trust-content .head-text {
   font-size: 60px;
-  line-height: 1.1;
+  line-height: 1.3em;
   color: black;
   font-weight: 200;
 }
@@ -36,7 +36,7 @@
   font-size: 18px;
   color: #666;
   max-width: 90%;
-  line-height: 1.6;
+  line-height: 1.3em;
 }
 
 .trust-btn {

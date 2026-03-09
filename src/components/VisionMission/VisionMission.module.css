@@ -46,6 +46,7 @@
   color: #333;
   align-self: flex-start;
   letter-spacing: 0.08em;
+  font-family: 'Poppins', sans-serif;
 }
 
 .vm-diamond {
@@ -80,7 +81,7 @@
 /* AnimatedScrollText styles */
 .vm-animated-text {
   margin: 0;
-  line-height: 1.7;
+  line-height: 1.3em;
   font-size: 1rem;
   font-weight: 200;
   max-width: 100%;

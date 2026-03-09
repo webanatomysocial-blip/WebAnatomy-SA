@@ -60,24 +60,25 @@
   display: flex;
   flex-direction: column;
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   opacity: 0; /* Hidden by default, handled by GSAP */
 }
 
 /* Typography classes */
 .head-text-white {
-  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-size: clamp(2rem, 4vw, 9rem);
   font-weight: 200;
+  font-size: 3rem !important;
   color: #ffffff;
-  line-height: 1.2;
+  line-height: 1.3em;
   margin: 0;
   letter-spacing: -0.02em;
 }
 
 .big-head-text-white {
-  font-size: clamp(4rem, 10vw, 9rem);
-  font-weight: 200;
+  font-size: 9rem !important;
+  font-weight: 300;
   color: #ffffff;
   line-height: 1;
   margin: 0;
@@ -87,7 +88,7 @@
 .para-text-white {
   font-size: 1rem;
   color: rgba(255, 255, 255, 0.7);
-  line-height: 1.6;
+  line-height: 1.3em;
   margin: 0;
   max-width: 420px;
 }
@@ -109,8 +110,16 @@
   .wa-about-one-on-one-left-outer-container,
   .wa-about-one-on-one-right-outer-container {
     width: 100%;
-    align-items: center;
-    text-align: center;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .head-text-white {
+    font-size: 3rem !important; /* Larger and bolder for mobile */
+  }
+
+  .big-head-text-white {
+    font-size: 5.5rem; /* More impactful numbers */
   }
 
   .wa-about-one-on-one-left-outer-container {

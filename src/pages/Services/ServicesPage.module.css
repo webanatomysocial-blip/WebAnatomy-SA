@@ -47,7 +47,7 @@
 .sp-hero-title {
   font-size: 52px;
   font-weight: 200;
-  line-height: 1.08;
+  line-height: 1.3em;
   letter-spacing: -2px;
 }
 
@@ -62,7 +62,7 @@
 .sp-hero-desc {
   font-size: 16px;
   color: rgba(255, 255, 255, 0.55);
-  line-height: 1.6;
+  line-height: 1.3em;
 }
 
 .sp-hero-cta {
@@ -193,7 +193,7 @@
 .sp-card-list li {
   color: rgba(255, 255, 255, 0.55);
   font-size: 14px;
-  line-height: 1.5;
+  line-height: 1.3em;
 }
 
 /* Card corner glow */
@@ -286,7 +286,7 @@
 .approach-card-desc {
   font-size: 14px;
   color: rgba(255, 255, 255, 0.5);
-  line-height: 1.65;
+  line-height: 1.3em;
 }
 
 /* ── Responsive ── */

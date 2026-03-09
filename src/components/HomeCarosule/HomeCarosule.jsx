@@ -4,6 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { GoArrowRight } from "react-icons/go";
 
 import img1 from "../../assets/images/Home-images/banner-images/1.webp";
+import newImg from "../../assets/images/Home-images/banner-images/digital-marketing.jpg";
 import vid1 from "../../assets/videos/banner-video/Web-anatomy-showreel.mp4";
 import styles from "./HomeCarosule.module.css";
 
@@ -27,33 +28,33 @@ const HomeCarosule = () => {
       },
       {
         title: "Brand Journey",
-        thumbnail: img1,
+        thumbnail: newImg,
         heading: "Built to scale.",
         subheading: "Designed to win.",
         description: "From vision to visuals, we shape your brand identity.",
         button: "View Casestudy",
-        link: "/case-studies/brand-journey",
-        videoSrc: vid1,
+        link: "/blog",
+        imageSrc: newImg,
       },
       {
         title: "Creative Impact",
-        thumbnail: img1,
+        thumbnail: newImg,
         heading: "Minimal, Bold, Strategic",
         subheading: "Let’s Build Something Bold, Something Strong",
         description: "Engaging designs backed by impactful storytelling.",
         button: "Schedule a Quick Call",
         link: "/contact",
-        videoSrc: vid1,
+        imageSrc: newImg,
       },
       {
         title: "Creative Meets Strategy",
-        thumbnail: img1,
+        thumbnail: newImg,
         heading: "Creative Meets Strategy",
         subheading: "Design. Disrupt. Deliver",
         description: "Engaging designs backed by impactful storytelling.",
         button: "Explore Services",
         link: "/services",
-        videoSrc: vid1,
+        imageSrc: newImg,
       },
     ],
     []
@@ -87,41 +88,23 @@ const HomeCarosule = () => {
   }, []);
 
   /* ----------------------------------
-     VIDEO ENDED -> NEXT SLIDE (ESLINT SAFE)
+     VIDEO/IMAGE PLAY + PROGRESS BAR SYNC
   ---------------------------------- */
   useEffect(() => {
-    const videos = videoRefs.current.map((ref) => ref.current);
-
-    const handleEnded = () => {
-      setCurrentIndex((prev) => (prev + 1) % slides.length);
-    };
-
-    videos.forEach((video) => {
-      video?.addEventListener("ended", handleEnded);
-    });
-
-    return () => {
-      videos.forEach((video) => {
-        video?.removeEventListener("ended", handleEnded);
-      });
-    };
-  }, [slides.length]);
-
-  /* ----------------------------------
-     VIDEO PLAY + PROGRESS BAR SYNC
-  ---------------------------------- */
-  useEffect(() => {
+    const currentSlide = slides[currentIndex];
     const currentVideo = videoRefs.current[currentIndex]?.current;
     const currentBar = progressBarRefs.current[currentIndex]?.current;
 
-    if (!currentVideo || !currentBar) return;
+    if (!currentBar) return;
 
-    // Pause & reset other videos
+    // Pause & reset all videos
     videoRefs.current.forEach((ref, i) => {
       const video = ref.current;
-      if (video && i !== currentIndex) {
-        video.pause();
-        video.currentTime = 0;
+      if (video) {
+        if (i !== currentIndex) {
+          video.pause();
+          video.currentTime = 0;
+        }
       }
     });
 
@@ -136,25 +119,62 @@ const HomeCarosule = () => {
     // Setup active progress bar
     currentBar.classList.add(styles.active);
     const fill = document.createElement("div");
-    fill.className = styles['bar-fill'];
+    fill.className = styles["bar-fill"];
     currentBar.appendChild(fill);
 
     let rafId;
+    let imageTimeout;
 
-    const updateProgress = () => {
-      if (currentVideo.duration) {
-        fill.style.width = `${
-          (currentVideo.currentTime / currentVideo.duration) * 100
-        }%`;
-      }
+    if (currentSlide.videoSrc && currentVideo) {
+      // HANDLE VIDEO
+      const updateProgress = () => {
+        if (currentVideo.duration) {
+          fill.style.width = `${
+            (currentVideo.currentTime / currentVideo.duration) * 100
+          }%`;
+        }
+        rafId = requestAnimationFrame(updateProgress);
+      };
+
+      const handleEnded = () => {
+        setCurrentIndex((prev) => (prev + 1) % slides.length);
+      };
+
+      currentVideo.addEventListener("ended", handleEnded);
+      currentVideo.play().catch(() => {});
       rafId = requestAnimationFrame(updateProgress);
-    };
 
-    currentVideo.play().catch(() => {});
-    rafId = requestAnimationFrame(updateProgress);
+      return () => {
+        cancelAnimationFrame(rafId);
+        currentVideo.removeEventListener("ended", handleEnded);
+      };
+    } else {
+      // HANDLE IMAGE (Fixed 5 seconds duration)
+      const duration = 5000;
+      const startTime = performance.now();
 
-    return () => cancelAnimationFrame(rafId);
-  }, [currentIndex]);
+      const updateProgress = (currentTime) => {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min((elapsed / duration) * 100, 100);
+        fill.style.width = `${progress}%`;
+
+        if (progress < 100) {
+          rafId = requestAnimationFrame(updateProgress);
+        }
+      };
+
+      rafId = requestAnimationFrame(updateProgress);
+
+      imageTimeout = setTimeout(() => {
+        setCurrentIndex((prev) => (prev + 1) % slides.length);
+      }, duration);
+
+      return () => {
+        cancelAnimationFrame(rafId);
+        clearTimeout(imageTimeout);
+      };
+    }
+  }, [currentIndex, slides]);
 
   /* ----------------------------------
      JSX
@@ -170,15 +190,24 @@ const HomeCarosule = () => {
             key={index}
             className={`${styles['wac-slide']} ${index === currentIndex ? styles.active : ""}`}
           >
-            <video
-              ref={videoRefs.current[index]}
-              className={styles['wac-video-bg']}
-              muted
-              playsInline
-              preload="auto"
-            >
-              <source src={slide.videoSrc} type="video/mp4" />
-            </video>
+            {slide.videoSrc ? (
+              <video
+                ref={videoRefs.current[index]}
+                className={styles["wac-video-bg"]}
+                muted
+                playsInline
+                preload="auto"
+              >
+                <source src={slide.videoSrc} type="video/mp4" />
+              </video>
+            ) : (
+              <img
+                src={slide.imageSrc}
+                alt={slide.title}
+                className={styles["wac-video-bg"]}
+                style={{ objectFit: "cover", width: "100%", height: "100%" }}
+              />
+            )}
           </div>
         ))}
       </div>

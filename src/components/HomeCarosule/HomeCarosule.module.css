@@ -78,7 +78,7 @@
   z-index: 1 !important;
   position: relative;
   padding-bottom: 15px;
-  line-height: 1.2em;
+  line-height: 1.3em;
   font-family: var(--font-primary);
   white-space: pre-wrap;
 }
@@ -181,7 +181,7 @@
   justify-content: space-between; /* top & bottom separation */
   align-items: flex-start;
   height: 100%; /* 🔑 locks layout */
-  padding: 16px;
+  padding: 10px;
 }
 .wac-cta-details > div:first-child {
   min-height: 80px; /* keeps spacing stable */
@@ -215,6 +215,7 @@
   display: flex;
   gap: 5px;
   padding-right: 10px;
+  padding-top: 10px;
 }
 
 .wac-progress-bar {
@@ -254,6 +255,12 @@
 @media (max-width: 768px) {
   .wac-heading {
     font-size: 2rem;
+    width: 100%;
+  }
+
+  .wac-subheading {
+    width: 100%;
+    font-size: 1.5rem;
   }
 
   .wac-description {
@@ -263,17 +270,19 @@
   .wac-right-cta {
     bottom: 30px;
     right: 30px;
-    padding: 15px 8px;
+    /* padding: 15px 8px; */
   }
 
   .wac-overlay {
     padding-left: 5%;
+    padding-right: 5%;
   }
 }
 
 @media (max-width: 480px) {
   .wac-heading {
     font-size: 1.5rem;
+    width: 100%;
   }
 
   .wac-video-carousel {
@@ -284,7 +293,7 @@
   }
 
   .wac-cta-button {
-    padding: 10px 20px;
+    /* padding: 10px 20px; */
     font-size: 0.9rem;
   }
 
@@ -296,6 +305,11 @@
 
   .wac-title {
     font-size: 1rem;
+  }
+
+  .wac-content.left-align {
+    padding-bottom: 220px; /* Increased to avoid overlap with .wac-right-cta */
+    padding-left: 0;
   }
 
   .wac-progress-bar {

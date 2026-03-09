@@ -22,7 +22,7 @@
     width: 45%;
     font-size: 3.5rem;
     font-weight: 200;
-    line-height: 1.2;
+    line-height: 1.3em;
     margin: 0;
     letter-spacing: -0.02em;
 }
@@ -30,7 +30,7 @@
 .about-headings p {
     width: 45%;
     font-size: 1.05rem;
-    line-height: 1.6;
+    line-height: 1.3em;
     margin: 0;
     color: #f0f0f0;
 }

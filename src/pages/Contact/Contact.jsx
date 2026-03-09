@@ -132,8 +132,8 @@ const Contact = () => {
               {/* LEFT */}
               <div className={styles["wa-location-box"]}>
                 <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/d/d1/Charminar-Pride_of_Hyderabad.jpg"
-                  alt="India"
+                  src="src/assets/contact/contact.jpg"
+                  alt="Pretoria"
                 />
                 <div className={styles["wa-location-meta"]}>
                   <p>244 Brooks Street, Brooklyn, Pretoria</p>

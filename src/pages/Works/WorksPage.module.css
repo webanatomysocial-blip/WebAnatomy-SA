@@ -56,7 +56,7 @@
 .wp-hero-title {
   font-size: 52px;
   font-weight: 200;
-  line-height: 1.08;
+  line-height: 1.3em;
   letter-spacing: -2px;
 }
 
@@ -68,7 +68,7 @@
 .wp-hero-desc {
   font-size: 16px;
   color: rgba(255, 255, 255, 0.5);
-  line-height: 1.6;
+  line-height: 1.3em;
 }
 
 /* ── Projects Section ── */
@@ -158,7 +158,7 @@
 .wp-card-desc {
   font-size: 16px;
   color: rgba(255, 255, 255, 0.4);
-  line-height: 1.5;
+  line-height: 1.3em;
 }
 
 /* ── Responsive ── */

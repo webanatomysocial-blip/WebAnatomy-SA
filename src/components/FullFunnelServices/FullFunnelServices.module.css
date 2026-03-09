@@ -29,7 +29,7 @@
 .section-title {
   font-size: 44px;
   font-weight: 200; /* Increased weight for presence */
-  line-height: 48px;
+  line-height: 1.3em;
   max-width: 600px;
   letter-spacing: -1.5px;
 }
@@ -46,7 +46,7 @@
 .section-desc {
   font-size: 16px;
   color: #b5b5b5;
-  line-height: 1.6;
+  line-height: 1.3em;
   max-width: 400px;
   text-align:left;
 }
@@ -129,7 +129,7 @@
 .service-title {
   font-size: 22px;
   font-weight: 200;
-  line-height: 26.4px;
+  line-height: 1.3em;
   letter-spacing: -0.66px;
 }
 
@@ -145,7 +145,7 @@
 .service-list li {
   color: #b5b5b5;
   font-size: 16px;
-  line-height: 23.04px;
+  line-height: 1.3em;
   letter-spacing: -0.32px;
   display: flex;
   align-items: center;
