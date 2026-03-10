@@ -13,9 +13,9 @@
   width: 100%;
   margin: 0 auto;
   text-align: left;
-  padding: 80px 100px 0px 100px;
+  padding: 80px 100px 0px 0px;
   position: relative;
-  left: 0;
+  left: 24%;
   top: 24%;
 }
 

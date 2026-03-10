@@ -73,7 +73,7 @@ const Footer = () => {
                 <a href="tel:+270733356100"> +27 073 335 6100</a>
               </li>
               <li>
-                <a href="mailto:hello@businessanatomy.co.sa">hello@businessanatomy.co.sa</a>
+                <a href="mailto:hello@businessanatomy.co.za">hello@businessanatomy.co.za</a>
               </li>
             </ul>
           </div>

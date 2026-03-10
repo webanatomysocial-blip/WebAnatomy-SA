@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { GoArrowRight } from "react-icons/go";
 import {
   GoCommentDiscussion,
@@ -11,6 +11,18 @@ import AnimatedLetterHeading from "../../components/AnimatedLetterHeading/Animat
 import AnimatedContent from "../../components/AnimatedContent/AnimatedContent.jsx";
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    company: "",
+    message: "",
+  });
+
+  const [status, setStatus] = useState({ type: "", message: "" });
+  const [loading, setLoading] = useState(false);
+
   const animProps = {
     distance: 150,
     direction: "vertical",
@@ -21,6 +33,56 @@ const Contact = () => {
     animateOpacity: true,
     threshold: 0.01,
     delay: 0.3,
+  };
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    setStatus({ type: "", message: "" });
+
+    try {
+      const response = await fetch("/api/contact.php", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+
+      if (result.status === "success") {
+        setStatus({
+          type: "success",
+          message: "Thank you! Your message has been sent.",
+        });
+        setFormData({
+          firstName: "",
+          lastName: "",
+          email: "",
+          phone: "",
+          company: "",
+          message: "",
+        });
+      } else {
+        setStatus({
+          type: "error",
+          message: result.message || "Failed to send message.",
+        });
+      }
+    } catch (error) {
+      setStatus({
+        type: "error",
+        message: "An error occurred. Please try again later.",
+      });
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -66,49 +128,103 @@ const Contact = () => {
 
             {/* RIGHT */}
             <div className={styles["wa-contact-form-wrap"]}>
-              <form className={styles["wa-contact-form"]}>
+              <form
+                className={styles["wa-contact-form"]}
+                onSubmit={handleSubmit}
+              >
                 <div className={styles["wa-form-row"]}>
                   <div className={styles["wa-form-field"]}>
                     <label>First Name*</label>
-                    <input type="text" placeholder="Enter first name" />
+                    <input
+                      type="text"
+                      name="firstName"
+                      value={formData.firstName}
+                      onChange={handleInputChange}
+                      placeholder="Enter first name"
+                      required
+                    />
                   </div>
                   <div className={styles["wa-form-field"]}>
                     <label>Last Name</label>
-                    <input type="text" placeholder="Enter last name" />
+                    <input
+                      type="text"
+                      name="lastName"
+                      value={formData.lastName}
+                      onChange={handleInputChange}
+                      placeholder="Enter last name"
+                    />
                   </div>
                 </div>
 
                 <div className={styles["wa-form-row"]}>
                   <div className={styles["wa-form-field"]}>
                     <label>Email*</label>
-                    <input type="email" placeholder="Enter email" />
+                    <input
+                      type="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleInputChange}
+                      placeholder="Enter email"
+                      required
+                    />
                   </div>
                   <div className={styles["wa-form-field"]}>
                     <label>Phone Number*</label>
-                    <input type="tel" placeholder="Enter your number" />
+                    <input
+                      type="tel"
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleInputChange}
+                      placeholder="Enter your number"
+                      required
+                    />
                   </div>
                 </div>
 
                 <div className={styles["wa-form-field"]}>
                   <label>Company Name</label>
-                  <input type="text" placeholder="Enter your company name" />
+                  <input
+                    type="text"
+                    name="company"
+                    value={formData.company}
+                    onChange={handleInputChange}
+                    placeholder="Enter your company name"
+                  />
                 </div>
 
                 <div className={styles["wa-form-field"]}>
                   <label>Tell Us More</label>
-                  <textarea placeholder="Brief about your project" />
+                  <textarea
+                    name="message"
+                    value={formData.message}
+                    onChange={handleInputChange}
+                    placeholder="Brief about your project"
+                  />
                 </div>
 
                 <div className={styles["wa-form-consent"]}>
-                  <input type="checkbox" id="wa-policy" />
+                  <input type="checkbox" id="wa-policy" required />
                   <label htmlFor="wa-policy">
                     I have read the <a href="/privacy-policy">privacy policy</a>{" "}
                     and consent to the processing of my data
                   </label>
                 </div>
 
-                <button className={styles["wa-contact-submit"]}>
-                  Send Enquiry <GoArrowRight className={styles["arrow-icon"]} />
+                {status.message && (
+                  <div
+                    className={`${styles["wa-form-status"]} ${styles[status.type]}`}
+                  >
+                    {status.message}
+                  </div>
+                )}
+
+                <button
+                  type="submit"
+                  className={styles["wa-contact-submit"]}
+                  disabled={loading}
+                >
+                  {loading ? "Sending..." : "Send Enquiry"}{" "}
+                  <GoArrowRight className={styles["arrow-icon"]} />
                 </button>
               </form>
             </div>
@@ -131,10 +247,7 @@ const Contact = () => {
             <div className={styles["wa-info-grid"]}>
               {/* LEFT */}
               <div className={styles["wa-location-box"]}>
-                <img
-                  src="src/assets/contact/contact.jpg"
-                  alt="Pretoria"
-                />
+                <img src="src/assets/contact/contact.jpg" alt="Pretoria" />
                 <div className={styles["wa-location-meta"]}>
                   <p>244 Brooks Street, Brooklyn, Pretoria</p>
                   {/* <a href="https://maps.google.com">Google Maps</a> */}

@@ -20,10 +20,10 @@
 }
 
 .left-section {
-    flex-direction: column;
-    width: 50%;
-    display: flex;
-    gap: 30px;
+  flex-direction: column;
+  width: 50%;
+  display: flex;
+  gap: 30px;
 }
 
 .success-stories-card {
@@ -96,8 +96,7 @@
 .indicator-number {
   font-size: 1.2rem;
   color: #555;
-  font-family: 'Poppins', sans-serif;
-
+  font-family: "Poppins", sans-serif;
 }
 
 .video-section {
@@ -115,14 +114,14 @@
 }
 
 .right-section {
-    background-color: rgb(0, 0, 0);
-    flex-direction: column;
-    justify-content: center;
-    width: 50%;
-    display: flex;
-    border-radius: 5px;
-    gap: 30px;
-    padding: 40px;
+  background-color: rgb(0, 0, 0);
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  display: flex;
+  border-radius: 5px;
+  gap: 30px;
+  padding: 40px;
 }
 
 .head-text-white {
@@ -193,7 +192,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 60px;
+  height: 120px;
   transition: opacity 0.3s ease;
 }
 
