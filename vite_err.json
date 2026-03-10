@@ -1,8 +1,0 @@
-{
-  "errors": [
-    {
-      "kind": "UNRESOLVED_IMPORT",
-      "message": "\u001b[31m[UNRESOLVED_IMPORT] Error:\u001b[0m Could not resolve '../../assets/images/Recognitions/2.png' in src/components/OurStoryHomePage/OurStoryHomePage.jsx\n    \u001b[38;5;246m╭\u001b[0m\u001b[38;5;246m─\u001b[0m\u001b[38;5;246m[\u001b[0m src/components/OurStoryHomePage/OurStoryHomePage.jsx:10:18 \u001b[38;5;246m]\u001b[0m\n    \u001b[38;5;246m│\u001b[0m\n \u001b[38;5;246m10 │\u001b[0m \u001b[38;5;249mi\u001b[0m\u001b[38;5;249mm\u001b[0m\u001b[38;5;249mp\u001b[0m\u001b[38;5;249mo\u001b[0m\u001b[38;5;249mr\u001b[0m\u001b[38;5;249mt\u001b[0m\u001b[38;5;249m \u001b[0m\u001b[38;5;249mi\u001b[0m\u001b[38;5;249mm\u001b[0m\u001b[38;5;249mg\u001b[0m\u001b[38;5;249m2\u001b[0m\u001b[38;5;249m \u001b[0m\u001b[38;5;249mf\u001b[0m\u001b[38;5;249mr\u001b[0m\u001b[38;5;249mo\u001b[0m\u001b[38;5;249mm\u001b[0m\u001b[38;5;249m \u001b[0m\"../../assets/images/Recognitions/2.png\"\u001b[38;5;249m;\u001b[0m\n \u001b[38;5;240m   │\u001b[0m                  ────────────────────┬───────────────────  \n \u001b[38;5;240m   │\u001b[0m                                      ╰───────────────────── Module not found.\n\u001b[38;5;246m────╯\u001b[0m\n"
-    }
-  ]
-}

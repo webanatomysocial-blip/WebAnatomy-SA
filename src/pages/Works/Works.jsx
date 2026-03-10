@@ -12,6 +12,7 @@ import erynitsImg from "../../assets/projects/erynits.webp";
 import agilImg from "../../assets/projects/agil.png";
 import mudraYogaImg from "../../assets/projects/mudra_yoga.jpg";
 import sonivaDentalImg from "../../assets/projects/soniva_dental.png";
+import ecoRootImg from "../../assets/projects/eco_root.png";
 
 const projectsData = [
   {
@@ -19,42 +20,42 @@ const projectsData = [
     title: "Erynits",
     desc: "Contemporary and minimalist design approaches for art exhibitions.",
     tags: ["Branding"],
-    image: erynitsImg,
+    image: "https://framerusercontent.com/images/glvzMi1bsrezkCOBb7gy7QI48k.webp",
   },
   {
     number: "02",
     title: "AGIL",
     desc: "Contemporary and minimalist design approaches for art exhibitions.",
     tags: ["Digital Services", "Branding"],
-    image: agilImg,
+    image: "https://framerusercontent.com/images/MdFGRJWHZgid1fJ5kMsPhQloI8.png",
   },
   {
     number: "03",
     title: "Mudra Yoga",
     desc: "Contemporary and minimalist design approaches for art exhibitions.",
     tags: ["Digital Services"],
-    image: mudraYogaImg,
+    image: "https://framerusercontent.com/images/24DeAmSrXCLJAoqYo1s1mnp8yE.jpg",
   },
   {
     number: "04",
     title: "Soniva Dental",
     desc: "Contemporary and minimalist design approaches for art exhibitions.",
     tags: ["Digital Services"],
-    image: sonivaDentalImg,
+    image: "https://framerusercontent.com/images/MtkDTAYw8w7K1UTf1faofBB0Uzk.png",
   },
   {
     number: "05",
     title: "Eco root",
     desc: "Contemporary and minimalist design approaches for art exhibitions.",
     tags: ["Digital Services"],
-    image: erynitsImg,
+    image: "https://framerusercontent.com/images/iNjSWNheyN4OuwN0Ohs33jniNY.jpg",
   },
   {
     number: "06",
     title: "Tekninja",
-    desc: "Contemporary and minimalist design approaches for art exhibitions.",
+    desc: "Elevating home automation with strategic social media marketing and branding.",
     tags: ["Digital Services", "Branding"],
-    image: agilImg,
+    image: "https://framerusercontent.com/images/TxkveyjxfcKs4jTS0wR8EUe6w.png",
   },
 ];
 
@@ -155,7 +156,21 @@ export default function Works() {
               {projectsData.map((project, index) => (
                 <a
                   key={index}
-                  href="#"
+                  href={
+                    project.title === "Erynits"
+                      ? "/works/eryntis"
+                      : project.title === "AGIL"
+                      ? "/works/agil"
+                      : project.title === "Mudra Yoga"
+                      ? "/works/mudra"
+                      : project.title === "Soniva Dental"
+                      ? "/works/soniva"
+                      : project.title === "Eco root"
+                      ? "/works/eco-root"
+                      : project.title === "Tekninja"
+                      ? "/works/tekninja"
+                      : "#"
+                  }
                   className={styles["wp-card"]}
                   ref={(el) => (cardsRef.current[index] = el)}
                 >

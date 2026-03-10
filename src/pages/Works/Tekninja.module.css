@@ -1,0 +1,35 @@
+.tekninjaPage {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #ffffff;
+  overflow-x: hidden;
+}
+
+.imageStack {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.imageContainer {
+  width: 100%;
+  overflow: hidden;
+  background-color: #f9f9f9;
+}
+
+.fullWidthImg {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.revealImage {
+  will-change: transform, opacity;
+}
+
+@media (max-width: 768px) {
+  .tekninjaPage {
+    padding-top: 60px; /* Header offset */
+  }
+}

@@ -1,0 +1,29 @@
+.sonivaPage {
+  background-color: #fff;
+  width: 100%;
+  overflow-x: hidden;
+  padding-top: 80px; /* Offset for fixed header */
+}
+
+.imageContainer {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  will-change: transform, opacity;
+  background-color: #f4f5f4; /* Match Erynits/Agil */
+}
+
+.fullWidthImg {
+  width: 100%;
+  max-width: 1920px; /* Limit max width for ultra-wide screens */
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .sonivaPage {
+    padding-top: 60px;
+  }
+}

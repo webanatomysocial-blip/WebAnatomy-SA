@@ -1,0 +1,34 @@
+.agilPage {
+  background-color: #fff;
+  width: 100%;
+  overflow-x: hidden;
+  padding-top: 80px; /* Offset for fixed header */
+}
+
+.imageContainer {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+}
+
+.fullWidthImg {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* Animations */
+.imageContainer {
+  will-change: transform, opacity;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .agilPage {
+    padding-top: 60px;
+  }
+}

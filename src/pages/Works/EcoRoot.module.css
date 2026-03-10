@@ -1,0 +1,188 @@
+.ecoRootPage {
+  background-color: #fcfcfc;
+  width: 100%;
+  overflow-x: hidden;
+  padding-top: 80px; 
+  font-family: 'Manrope', sans-serif;
+  color: #111;
+}
+
+.heroSection, .mockupSection, .profileSection {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+}
+
+.fullWidthImg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.introSection {
+  width: 100%;
+  padding: 120px 50px;
+  background-color: #fcfcfc;
+}
+
+.textContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sectionTitle {
+  margin-bottom: 50px;
+}
+
+.sectionText {
+  font-size: clamp(1.2rem, 1.3vw, 1.5rem);
+  line-height: 1.8;
+  font-weight: 300;
+  max-width: 1000px;
+  color: #222;
+}
+
+.logoShowcase {
+  width: 100%;
+  padding: 100px 0;
+  background-color: #fff;
+}
+
+.boxedContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+
+.boxedImg {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 80px;
+}
+
+.boxedImg:last-child {
+  margin-bottom: 0;
+}
+
+.colorPaletteSection, .poweredSection {
+  width: 100%;
+  padding: 0;
+  background-color: #fcfcfc;
+}
+
+.poweredTextContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f7f7f7; /* Very light gray to match screenshot */
+  padding: 100px;
+}
+
+.poweredText {
+  display: flex;
+  flex-direction: column;
+  line-height: 0.9;
+}
+
+.bigPowered {
+  font-size: clamp(4rem, 8vw, 10rem);
+  font-weight: 900;
+  color: #032d29; /* Dark green from brand */
+  letter-spacing: -4px;
+  text-transform: uppercase;
+}
+
+.smallByNature {
+  font-size: clamp(1rem, 2vw, 2.5rem);
+  font-weight: 400;
+  color: #032d29;
+  letter-spacing: 2px;
+  margin-top: -10px;
+  opacity: 0.8;
+}
+
+.gridSection {
+  width: 100%;
+  padding: 0;
+}
+
+.mockupGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+}
+
+.gridItem {
+  width: 100%;
+  overflow: hidden;
+}
+
+.gridItem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.gridItem:hover img {
+  transform: scale(1.05);
+}
+
+.largeSpacer {
+  height: 200px;
+  width: 100%;
+  background-color: #fff;
+}
+
+.recentProjectsSection {
+  width: 100%;
+  padding: 100px 0;
+  background-color: #fff;
+}
+
+.revealImage {
+  will-change: transform, opacity;
+}
+
+@media (max-width: 1024px) {
+  .splitGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .largeSpacer {
+    height: 120px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ecoRootPage {
+    padding-top: 60px;
+  }
+  
+  .introSection {
+    padding: 80px 20px;
+  }
+
+  .boxedContainer {
+    padding: 0 20px;
+  }
+  
+  .sectionTitle {
+    margin-bottom: 30px;
+  }
+  
+  .largeSpacer {
+    height: 80px;
+  }
+
+  .sectionText {
+    font-size: 1.1rem;
+  }
+
+  .logoShowcase {
+    padding: 60px 0;
+  }
+}

@@ -1,0 +1,60 @@
+.erynitsPage {
+  background-color: #fff;
+  width: 100%;
+  overflow-x: hidden;
+  padding-top: 80px; /* Offset for fixed header */
+}
+
+.heroSection, .stackSection, .splitSection {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.imageContainer {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fullWidthImg {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.splitGrid {
+  display: flex;
+  width: 100%;
+  gap: 0;
+}
+
+.splitLeft, .splitRight {
+  flex: 1;
+  overflow: hidden;
+}
+
+.splitGrid img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Animations and polish */
+.imageContainer {
+  will-change: transform, opacity;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .erynitsPage {
+    padding-top: 60px;
+  }
+  
+  .splitGrid {
+    flex-direction: column;
+  }
+}

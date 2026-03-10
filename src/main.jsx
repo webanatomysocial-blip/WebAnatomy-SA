@@ -9,6 +9,12 @@ import Careers from "./pages/Careers/Careers";
 import About from "./pages/About/About";
 import ScrollToTop from "./components/ScrollToTop";
 import Works from "./pages/Works/Works";
+import Erynits from "./pages/Works/Erynits";
+import Agil from "./pages/Works/Agil";
+import Mudra from "./pages/Works/Mudra";
+import Soniva from "./pages/Works/Soniva";
+import EcoRoot from "./pages/Works/EcoRoot";
+import Tekninja from "./pages/Works/Tekninja";
 import Services from "./pages/Services/Services";
 import Solutions from "./pages/Solutions/Solutions";
 import Industries from "./pages/Industries/Industries";
@@ -49,6 +55,12 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/careers" element={<Careers />} />
         <Route path="/about" element={<About />} />
         <Route path="/works" element={<Works />} />
+        <Route path="/works/eryntis" element={<Erynits />} />
+        <Route path="/works/agil" element={<Agil />} />
+        <Route path="/works/mudra" element={<Mudra />} />
+        <Route path="/works/soniva" element={<Soniva />} />
+        <Route path="/works/eco-root" element={<EcoRoot />} />
+        <Route path="/works/tekninja" element={<Tekninja />} />
         <Route path="/services" element={<Services />} />
         <Route path="/solutions" element={<Solutions />} />
         <Route path="/industries" element={<Industries />} />

@@ -11,14 +11,15 @@ import erynitsImg from "../../assets/projects/erynits.webp";
 import agilImg from "../../assets/projects/agil.png";
 import mudraYogaImg from "../../assets/projects/mudra_yoga.jpg";
 import sonivaDentalImg from "../../assets/projects/soniva_dental.png";
+import ecoRootImg from "../../assets/projects/eco_root.png";
 
 const projectsData = [
-  { index: "01", title: "Erynits",       category: "Branding",         image: erynitsImg      },
-  { index: "02", title: "AGIL",          category: "Digital Services",  image: agilImg         },
-  { index: "03", title: "Mudra Yoga",    category: "Digital Services",  image: mudraYogaImg    },
-  { index: "04", title: "Soniva Dental", category: "Digital Services",  image: sonivaDentalImg },
-  { index: "05", title: "Eco root",      category: "Digital Services",  image: erynitsImg      },
-  { index: "06", title: "Tekninja",      category: "Digital Services",  image: agilImg         },
+  { index: "01", title: "Erynits",       category: "Branding",         image: "https://framerusercontent.com/images/glvzMi1bsrezkCOBb7gy7QI48k.webp",      link: "/works/eryntis" },
+  { index: "02", title: "AGIL",          category: "Digital Services",  image: "https://framerusercontent.com/images/MdFGRJWHZgid1fJ5kMsPhQloI8.png",         link: "/works/agil" },
+  { index: "03", title: "Mudra Yoga",    category: "Digital Services",  image: "https://framerusercontent.com/images/24DeAmSrXCLJAoqYo1s1mnp8yE.jpg",    link: "/works/mudra" },
+  { index: "04", title: "Soniva Dental", category: "Digital Services",  image: "https://framerusercontent.com/images/MtkDTAYw8w7K1UTf1faofBB0Uzk.png", link: "/works/soniva" },
+  { index: "05", title: "Eco root",      category: "Digital Services",  image: "https://framerusercontent.com/images/iNjSWNheyN4OuwN0Ohs33jniNY.jpg",      link: "/works/eco-root" },
+  { index: "06", title: "Tekninja",      category: "Digital Services",  image: "https://framerusercontent.com/images/TxkveyjxfcKs4jTS0wR8EUe6w.png",         link: "/works/tekninja" },
 ];
 
 export default function RecentProjects() {
@@ -77,9 +78,11 @@ export default function RecentProjects() {
 
           <div className={styles['project-list']} ref={listRef}>
             {projectsData.map((project, index) => (
-              <div
+              <a
+                href={project.link || "#"}
                 key={index}
                 className={`${styles['project-item']} ${hoveredProject === index ? styles['is-hovered'] : ""}`}
+                style={{ display: "flex", textDecoration: "none", color: "inherit" }}
                 onMouseEnter={() => setHoveredProject(index)}
                 onMouseLeave={() => setHoveredProject(null)}
               >
@@ -104,7 +107,7 @@ export default function RecentProjects() {
 
                 {/* Right glow */}
                 <div className={styles['row-glow']}></div>
-              </div>
+              </a>
             ))}
           </div>
         </div>
