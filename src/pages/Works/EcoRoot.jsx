@@ -4,6 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import AnimatedLetterHeading from "../../components/AnimatedLetterHeading/AnimatedLetterHeading";
 import RecentProjects from "../../components/RecentProjects/RecentProjects";
 import FAQ from "../../components/FAQ/FAQ";
+import ContactForm from "../../components/ContactForm/ContactForm";
 import styles from "./EcoRoot.module.css";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -17,7 +18,9 @@ export default function EcoRoot() {
 
     const ctx = gsap.context(() => {
       // Reveal animations for images
-      const images = containerRef.current.querySelectorAll(`.${styles.revealImage}`);
+      const images = containerRef.current.querySelectorAll(
+        `.${styles.revealImage}`,
+      );
       images.forEach((img) => {
         gsap.fromTo(
           img,
@@ -32,7 +35,7 @@ export default function EcoRoot() {
               start: "top 85%",
               toggleActions: "play none none none",
             },
-          }
+          },
         );
       });
     }, containerRef);
@@ -60,7 +63,12 @@ export default function EcoRoot() {
             className={styles.sectionTitle}
           />
           <div className={`${styles.sectionText} ${styles.revealImage}`}>
-            Eco Root’s logo is a visual narrative of ancestral wisdom meeting modern sustainability, embodied in intertwining roots symbolizing harmony between tradition and innovation. Representing a commitment to eco-friendly solutions derived from plants, the logo is a concise story of evolution and resilience, balancing the roots of the past with the demands of today’s eco-conscious world.
+            Eco Root’s logo is a visual narrative of ancestral wisdom meeting
+            modern sustainability, embodied in intertwining roots symbolizing
+            harmony between tradition and innovation. Representing a commitment
+            to eco-friendly solutions derived from plants, the logo is a concise
+            story of evolution and resilience, balancing the roots of the past
+            with the demands of today’s eco-conscious world.
           </div>
         </div>
       </section>
@@ -91,31 +99,16 @@ export default function EcoRoot() {
               className={`${styles.fullWidthImg} ${styles.revealImage}`}
             />
           </div>
-          <div className={`${styles.splitRight} ${styles.poweredTextContainer}`}>
-             <div className={styles.poweredText}>
-                <span className={styles.bigPowered}>Powered</span>
-                <span className={styles.smallByNature}>by nature</span>
-             </div>
+          <div
+            className={`${styles.splitRight} ${styles.poweredTextContainer}`}
+          >
+            <img
+              src="https://webanatomy.in/wp-content/uploads/2024/05/999aca193876845.65f9936fde699.gif"
+              alt="Eco Root Color Palette"
+              className={`${styles.fullWidthImg} ${styles.revealImage}`}
+            />
           </div>
         </div>
-      </section>
-
-      {/* 5. Image Grid Mockups (New Section from Screenshot) */}
-      <section className={styles.gridSection}>
-         <div className={styles.mockupGrid}>
-            <div className={styles.gridItem}>
-               <img src="https://webanatomy.in/wp-content/uploads/2024/05/Eco-root-2-scaled-1-1024x362.jpg" alt="Eco Root Branding" className={styles.revealImage} />
-            </div>
-            <div className={styles.gridItem}>
-               <img src="https://webanatomy.in/wp-content/uploads/2024/05/Tote-Bag-Mockup-01-scaled-1.jpg" alt="Eco Root Tote" className={styles.revealImage} />
-            </div>
-            <div className={styles.gridItem}>
-               <img src="https://webanatomy.in/wp-content/uploads/2024/05/iPhone-15-Pro-Mockup-scaled-1.jpg" alt="Eco Root iPhone" className={styles.revealImage} />
-            </div>
-            <div className={styles.gridItem}>
-               <img src="https://webanatomy.in/wp-content/uploads/2024/05/Eco-root-profile-01-scaled-1.jpg" alt="Eco Root Watch" className={styles.revealImage} />
-            </div>
-         </div>
       </section>
 
       {/* 6. Mockups - Full Width */}
@@ -126,26 +119,65 @@ export default function EcoRoot() {
           className={`${styles.fullWidthImg} ${styles.revealImage}`}
         />
       </section>
-      
-      {/* 6. Spacers matching reference layout (Elementor Spacers) */}
-      <div className={styles.largeSpacer}></div>
 
-      {/* 7. Profile Layout - Full Width */}
-      <section className={styles.profileSection}>
+      {/* 5. Image Grid Mockups (New Section from Screenshot) */}
+      <section className={styles.gridSection}>
+        <div className={styles.mockupGrid}>
+          <div className={styles.gridItem}>
+            <img
+              src="https://webanatomy.in/wp-content/uploads/2024/05/Eco-root-profile-03-scaled-1.jpg"
+              alt="Eco Root Branding"
+              className={styles.revealImage}
+            />
+          </div>
+          <div className={styles.gridItem}>
+            <img
+              src="https://webanatomy.in/wp-content/uploads/2024/05/Eco-root-profile-04-scaled-1.jpg"
+              alt="Eco Root Tote"
+              className={styles.revealImage}
+            />
+          </div>
+          <div className={styles.gridItem}>
+            <img
+              src="https://webanatomy.in/wp-content/uploads/2024/05/Eco-root-profile-05-scaled-1.jpg"
+              alt="Eco Root Billboard"
+              className={styles.revealImage}
+            />
+          </div>
+          <div className={styles.gridItem}>
+            <img
+              src="https://webanatomy.in/wp-content/uploads/2024/05/Eco-root-profile-06-scaled-1.jpg"
+              alt="Eco Root Phone"
+              className={styles.revealImage}
+            />
+          </div>
+          <div className={`${styles.gridItem} ${styles.gridItemFull}`}>
+            <img
+              src="https://webanatomy.in/wp-content/uploads/2024/05/iPhone-14-Pro-PSD-Mockup-scaled-1.jpg"
+              alt="Eco Root Phone Mockup"
+              className={styles.revealImage}
+            />
+          </div>
+          <div className={`${styles.gridItem} ${styles.gridItemFull}`}>
+            <img
+              src="https://webanatomy.in/wp-content/uploads/2024/05/Smart_Watch-Mockup-scaled-1.jpg"
+              alt="Eco Root Watch mockup"
+              className={styles.revealImage}
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* 6. Spacers matching reference layout (Elementor Spacers) */}
+
+      {/* 7. Additional Layout - Full Width Billboard Bottom */}
+      <section className={styles.heroSection}>
         <img
-          src="https://webanatomy.in/wp-content/uploads/2024/05/Eco-root-profile-01-scaled-1.jpg"
-          alt="Eco Root Profile Layout"
+          src="https://webanatomy.in/wp-content/uploads/2024/05/Eco-root-profile-01-scaled-1-2048x1152.jpg"
+          alt="Eco Root Billboard Bottom"
           className={`${styles.fullWidthImg} ${styles.revealImage}`}
         />
       </section>
-
-      {/* 8. Recent Projects - Matching live footer stack */}
-      <section className={styles.recentProjectsSection}>
-        <RecentProjects />
-      </section>
-
-      {/* 9. FAQ Section */}
-      <FAQ />
     </div>
   );
 }

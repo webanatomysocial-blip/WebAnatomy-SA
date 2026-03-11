@@ -2,12 +2,14 @@
   background-color: #fcfcfc;
   width: 100%;
   overflow-x: hidden;
-  padding-top: 80px; 
-  font-family: 'Manrope', sans-serif;
+  padding-top: 80px;
+  font-family: "Manrope", sans-serif;
   color: #111;
 }
 
-.heroSection, .mockupSection, .profileSection {
+.heroSection,
+.mockupSection,
+.profileSection {
   width: 100%;
   margin: 0;
   padding: 0;
@@ -22,12 +24,12 @@
 
 .introSection {
   width: 100%;
-  padding: 120px 50px;
+  padding: 120px 100px;
   background-color: #fcfcfc;
 }
 
 .textContainer {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
@@ -50,9 +52,9 @@
 }
 
 .boxedContainer {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 0 50px;
+  padding: 0 100px;
 }
 
 .boxedImg {
@@ -66,7 +68,8 @@
   margin-bottom: 0;
 }
 
-.colorPaletteSection, .poweredSection {
+.colorPaletteSection,
+.poweredSection {
   width: 100%;
   padding: 0;
   background-color: #fcfcfc;
@@ -103,6 +106,17 @@
   opacity: 0.8;
 }
 
+.splitGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+}
+
+.splitLeft,
+.splitRight {
+  width: 100%;
+}
+
 .gridSection {
   width: 100%;
   padding: 0;
@@ -110,13 +124,17 @@
 
 .mockupGrid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
   width: 100%;
 }
 
 .gridItem {
   width: 100%;
   overflow: hidden;
+}
+
+.gridItemFull {
+  grid-column: span 2;
 }
 
 .gridItem img {
@@ -139,7 +157,7 @@
 
 .recentProjectsSection {
   width: 100%;
-  padding: 100px 0;
+  padding: 0px 0;
   background-color: #fff;
 }
 
@@ -148,10 +166,22 @@
 }
 
 @media (max-width: 1024px) {
+  .introSection {
+    padding: 80px 40px;
+  }
+
+  .boxedContainer {
+    padding: 0 40px;
+  }
+
   .splitGrid {
     grid-template-columns: 1fr;
   }
-  
+
+  .mockupGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .largeSpacer {
     height: 120px;
   }
@@ -161,7 +191,7 @@
   .ecoRootPage {
     padding-top: 60px;
   }
-  
+
   .introSection {
     padding: 80px 20px;
   }
@@ -169,11 +199,11 @@
   .boxedContainer {
     padding: 0 20px;
   }
-  
+
   .sectionTitle {
     margin-bottom: 30px;
   }
-  
+
   .largeSpacer {
     height: 80px;
   }
