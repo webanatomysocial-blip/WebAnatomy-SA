@@ -2,17 +2,13 @@ import React, { useEffect, useRef } from "react";
 import { GoArrowUpRight } from "react-icons/go";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import FAQ from "../../components/FAQ/FAQ";
-import AnimatedLetterHeading from "../../components/AnimatedLetterHeading/AnimatedLetterHeading";
+import FAQ from "../../components/FAQ/FAQ.jsx";
+import AnimatedLetterHeading from "../../components/AnimatedLetterHeading/AnimatedLetterHeading.jsx";
 import styles from "./WorksPage.module.css";
 import AnimatedContent from "../../components/AnimatedContent/AnimatedContent.jsx";
 
 // Import local project images
-import erynitsImg from "../../assets/projects/erynits.webp";
-import agilImg from "../../assets/projects/agil.png";
-import mudraYogaImg from "../../assets/projects/mudra_yoga.jpg";
-import sonivaDentalImg from "../../assets/projects/soniva_dental.png";
-import ecoRootImg from "../../assets/projects/eco_root.png";
+
 
 const projectsData = [
   {
@@ -158,17 +154,17 @@ export default function Works() {
                   key={index}
                   href={
                     project.title === "Erynits"
-                      ? "/works/eryntis"
+                      ? "/projects/eryntis"
                       : project.title === "AGIL"
-                      ? "/works/agil"
+                      ? "/projects/agil"
                       : project.title === "Mudra Yoga"
-                      ? "/works/mudra"
+                      ? "/projects/mudra"
                       : project.title === "Soniva Dental"
-                      ? "/works/soniva"
+                      ? "/projects/soniva"
                       : project.title === "Eco root"
-                      ? "/works/eco-root"
+                      ? "/projects/eco-root"
                       : project.title === "Tekninja"
-                      ? "/works/tekninja"
+                      ? "/projects/tekninja"
                       : "#"
                   }
                   className={styles["wp-card"]}

@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import FAQ from "../../components/FAQ/FAQ";
+import HomeScroll from "../../components/HomeScroll/HomeScroll.jsx";
 import AnimatedLetterHeading from "../../components/AnimatedLetterHeading/AnimatedLetterHeading";
 import styles from "./ServicesPage.module.css";
 import AnimatedContent from "../../components/AnimatedContent/AnimatedContent.jsx";
@@ -13,18 +14,18 @@ gsap.registerPlugin(ScrollTrigger);
 const servicesData = [
   {
     number: "01",
-    title: "SEO",
-    items: [
-      "Keyword Research",
-      "On-Page SEO",
-      "Link Building",
-      "SEO Analytics",
-    ],
+    title: "Branding",
+    items: ["Brand Strategy", "Visual Identity", "Market Positioning"],
   },
   {
     number: "02",
-    title: "Social Media",
-    items: ["Content Creation", "Social Campaigns", "Performance Tracking"],
+    title: "UI/UX Design",
+    items: [
+      "User Research",
+      "Wireframing",
+      "Prototyping",
+      "Interaction Design",
+    ],
   },
   {
     number: "03",
@@ -38,28 +39,28 @@ const servicesData = [
   },
   {
     number: "04",
-    title: "UI/UX Design",
+    title: "SEO",
     items: [
-      "User Research",
-      "Wireframing",
-      "Prototyping",
-      "Interaction Design",
+      "Keyword Research",
+      "On-Page SEO",
+      "Link Building",
+      "SEO Analytics",
     ],
   },
   {
     number: "05",
-    title: "Branding",
-    items: ["Brand Strategy", "Visual Identity", "Market Positioning"],
-  },
-  {
-    number: "06",
-    title: "Performance Marketing",
+    title: "Marketing",
     items: [
       "Paid Advertising",
       "Campaign Analytics",
       "Audience Targeting",
       "Retargeting Ads",
     ],
+  },
+  {
+    number: "06",
+    title: "Social Media",
+    items: ["Content Creation", "Social Campaigns", "Performance Tracking"],
   },
 ];
 
@@ -178,7 +179,7 @@ export default function Services() {
     
         {/* Hero */}
         <section className={styles["sp-hero"]} ref={heroRef}>
-          <AnimatedContent>
+          <AnimatedContent {...animProps}>
             <div className={styles["sp-hero-inner"]}>
               <div className={styles["sp-hero-left"]}>
                 <span
@@ -211,7 +212,7 @@ export default function Services() {
 
         {/* Services Grid */}
         <section className={styles["sp-services"]}>
-          <AnimatedContent>
+          <AnimatedContent {...animProps}>
             <div className={styles["sp-services-inner"]}>
               <div className={styles["sp-services-grid"]}>
                 {servicesData.map((service, index) => (
@@ -245,10 +246,12 @@ export default function Services() {
           </AnimatedContent>
         </section>
 
+        <HomeScroll />
+
       
         {/* Our Approach */}
         <section className={styles["sp-approach"]} ref={approachRef}>
-          <AnimatedContent>
+          <AnimatedContent {...animProps}>
             <div className={styles["sp-approach-inner"]}>
               <h2 className={styles["approach-header"]}>Our Approach</h2>
               <div className={styles["approach-cards"]}>

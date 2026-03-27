@@ -1,0 +1,102 @@
+.privacyPage {
+  background-color: #000;
+  color: #fff;
+  padding-bottom: 200px;
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 100px;
+}
+
+.heroSection {
+  padding: 160px 0 100px;
+  text-align: left;
+}
+
+.title {
+  font-size: 80px;
+  font-weight: 200;
+  line-height: 1;
+  margin-bottom: 30px;
+  letter-spacing: -0.04em;
+}
+
+.subtitle {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.4);
+  font-weight: 300;
+}
+
+.contentSection {
+  padding-top: 50px;
+}
+
+.contentBlock {
+  max-width: 800px;
+  margin-bottom: 80px;
+}
+
+.contentBlock h2 {
+  font-size: 32px;
+  font-weight: 300;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+.contentBlock p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+.contentBlock ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 30px;
+}
+
+.contentBlock li {
+  font-size: 17px;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 300;
+  margin-bottom: 15px;
+  position: relative;
+  padding-left: 24px;
+}
+
+.contentBlock li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 14px;
+  width: 4px;
+  height: 4px;
+  background-color: #fff;
+  border-radius: 50%;
+  opacity: 0.5;
+}
+
+.contentBlock strong {
+  color: #fff;
+  font-weight: 400;
+}
+
+@media (max-width: 1024px) {
+  .title { font-size: 60px; }
+  .container { padding: 0 40px; }
+}
+
+@media (max-width: 768px) {
+  .heroSection { padding: 120px 0 60px; }
+  .title { font-size: 40px; }
+  .container { padding: 0 20px; }
+  .contentBlock h2 { font-size: 26px; }
+  .contentBlock p { font-size: 16px; }
+}

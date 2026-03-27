@@ -1,0 +1,88 @@
+.faqPage {
+  background-color: #000;
+  color: #fff;
+  padding-bottom: 120px;
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 100px;
+}
+
+.heroSection {
+  padding: 160px 0 60px;
+  text-align: left;
+}
+
+.title {
+  font-size: 80px;
+  font-weight: 200;
+  line-height: 1.1;
+  margin-bottom: 25px;
+  letter-spacing: -0.04em;
+}
+
+.subtitle {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.4);
+  font-weight: 300;
+  max-width: 600px;
+}
+
+.contentSection {
+  padding-top: 40px;
+}
+
+.contentSection :global(.FAQ_faq-section__22y9L) {
+  padding-top: 0;
+}
+
+.ctaSection {
+  padding: 100px 0;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.02);
+  margin-top: 100px;
+}
+
+.ctaSection h2 {
+  font-size: 48px;
+  font-weight: 200;
+  margin-bottom: 15px;
+}
+
+.ctaSection p {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.4);
+  margin-bottom: 40px;
+}
+
+.ctaButton {
+  display: inline-block;
+  padding: 16px 40px;
+  background: #fff;
+  color: #000;
+  border-radius: 100px;
+  text-decoration: none;
+  font-weight: 400;
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.ctaButton:hover {
+  transform: translateY(-4px);
+  background: #f0f0f0;
+}
+
+@media (max-width: 1024px) {
+  .title { font-size: 60px; }
+  .container { padding: 0 40px; }
+}
+
+@media (max-width: 768px) {
+  .heroSection { padding: 120px 0 40px; }
+  .title { font-size: 42px; }
+  .container { padding: 0 20px; }
+  .ctaSection h2 { font-size: 32px; }
+}

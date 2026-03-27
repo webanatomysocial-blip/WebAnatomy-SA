@@ -75,7 +75,7 @@ const Contact = () => {
           message: result.message || "Failed to send message.",
         });
       }
-    } catch (error) {
+    } catch {
       setStatus({
         type: "error",
         message: "An error occurred. Please try again later.",
@@ -245,27 +245,29 @@ const Contact = () => {
             </p>
 
             <div className={styles["wa-info-grid"]}>
-              {/* LEFT */}
+              {/* SOUTH AFRICA */}
               <div className={styles["wa-location-box"]}>
-                <img src="src/assets/contact/contact.jpg" alt="Pretoria" />
+                <img src="/src/assets/contact/contact.jpg" alt="Pretoria" />
                 <div className={styles["wa-location-meta"]}>
-                  <p>244 Brooks Street, Brooklyn, Pretoria</p>
-                  {/* <a href="https://maps.google.com">Google Maps</a> */}
+                  <p>
+     
+                    244 Brooks Street, Brooklyn, Pretoria
+                  </p>
                 </div>
               </div>
 
               {/* RIGHT */}
-              <div>
+              <div className={styles["wa-info-right"]}>
                 <div className={styles["wa-info-cards"]}>
                   <InfoCard
                     icon={<GoCommentDiscussion />}
                     title="General Enquiry"
-                    value=" +27 073 335 6100"
+                    value={<>Moumita <br /> +27 073 335 6100</>}
                   />
                   <InfoCard
                     icon={<GoPerson />}
                     title="Sales Enquiry"
-                    value="+27 073 335 6100"
+                    value={<>Moumita <br /> +27 073 335 6100</>}
                   />
                   <InfoCard
                     icon={<GoMail />}
@@ -275,7 +277,7 @@ const Contact = () => {
                   <InfoCard
                     icon={<GoDeviceMobile />}
                     title="HR Enquiry"
-                    value="+27 073 335 6100"
+                    value={<>Moumita <br /> +27 073 335 6100</>}
                   />
                 </div>
               </div>
@@ -291,8 +293,8 @@ const InfoCard = ({ icon, title, value }) => (
   <div className={styles["wa-info-card"]}>
     <div className={styles["wa-info-icon"]}>{icon}</div>
     <div>
-      <span>{title}</span>
-      <strong>{value}</strong>
+      <span className={styles["wa-card-title"]}>{title}</span>
+      <p className={styles["wa-card-value"]}>{value}</p>
     </div>
   </div>
 );

@@ -8,17 +8,19 @@ import Contact from "./pages/Contact/Contact";
 import Careers from "./pages/Careers/Careers";
 import About from "./pages/About/About";
 import ScrollToTop from "./components/ScrollToTop";
-import Works from "./pages/Works/Works";
-import Erynits from "./pages/Works/Erynits";
-import Agil from "./pages/Works/Agil";
-import Mudra from "./pages/Works/Mudra";
-import Soniva from "./pages/Works/Soniva";
-import EcoRoot from "./pages/Works/EcoRoot";
-import Tekninja from "./pages/Works/Tekninja";
+import Works from "./pages/Projects/Works";
+import Erynits from "./pages/Projects/Erynits";
+import Agil from "./pages/Projects/Agil";
+import Mudra from "./pages/Projects/Mudra";
+import Soniva from "./pages/Projects/Soniva";
+import EcoRoot from "./pages/Projects/EcoRoot";
+import Tekninja from "./pages/Projects/Tekninja";
 import Services from "./pages/Services/Services";
 import Solutions from "./pages/Solutions/Solutions";
 import Industries from "./pages/Industries/Industries";
-import Blog from "./pages/Blog/Blog";
+import FAQPage from "./pages/FAQ/FAQPage";
+import Privacy from "./pages/Privacy/Privacy";
+import Terms from "./pages/Terms/Terms";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import "./styles/global.css";
@@ -54,17 +56,19 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/contact" element={<Contact />} />
         <Route path="/careers" element={<Careers />} />
         <Route path="/about" element={<About />} />
-        <Route path="/works" element={<Works />} />
-        <Route path="/works/eryntis" element={<Erynits />} />
-        <Route path="/works/agil" element={<Agil />} />
-        <Route path="/works/mudra" element={<Mudra />} />
-        <Route path="/works/soniva" element={<Soniva />} />
-        <Route path="/works/eco-root" element={<EcoRoot />} />
-        <Route path="/works/tekninja" element={<Tekninja />} />
+        <Route path="/projects" element={<Works />} />
+        <Route path="/projects/eryntis" element={<Erynits />} />
+        <Route path="/projects/agil" element={<Agil />} />
+        <Route path="/projects/mudra" element={<Mudra />} />
+        <Route path="/projects/soniva" element={<Soniva />} />
+        <Route path="/projects/eco-root" element={<EcoRoot />} />
+        <Route path="/projects/tekninja" element={<Tekninja />} />
         <Route path="/services" element={<Services />} />
         <Route path="/solutions" element={<Solutions />} />
         <Route path="/industries" element={<Industries />} />
-        <Route path="/blog" element={<Blog />} />
+        <Route path="/faqs" element={<FAQPage />} />
+        <Route path="/privacy" element={<Privacy />} />
+        <Route path="/terms" element={<Terms />} />
       </Routes>
       <Footer />
     </BrowserRouter>

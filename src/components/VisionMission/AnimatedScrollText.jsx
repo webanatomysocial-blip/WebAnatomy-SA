@@ -1,52 +1,67 @@
-import { useEffect, useRef } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import styles from "./VisionMission.module.css";
-
-gsap.registerPlugin(ScrollTrigger);
+import React, { useRef } from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion';
+import styles from './VisionMission.module.css';
 
 /**
- * AnimatedScrollText — renders text word-by-word, each word fading in
- * from gray to dark as the user scrolls through the parent card.
+ * Individual Character Component to safely use Hooks per letter.
  */
-export function AnimatedScrollText({ text, triggerRef }) {
+const AnimatedChar = ({ char, start, end, progress }) => {
+  // We fade both opacity and color for a better visual effect
+  const opacity = useTransform(progress, [start, end], [0.15, 1]);
+  const color = useTransform(progress, [start, end], ["#bbb", "#000"]);
+  
+  return (
+    <motion.span style={{ opacity, color }} className={styles["char-span"]}>
+      {char}
+    </motion.span>
+  );
+};
+
+export const AnimatedScrollText = ({ text }) => {
   const containerRef = useRef(null);
-
-  useEffect(() => {
-    const spans = containerRef.current?.querySelectorAll(`.${styles["char-span"]}`);
-    if (!spans || spans.length === 0) return;
-
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: triggerRef?.current || containerRef.current,
-        start: "top 80%",
-        end: "bottom 60%",
-        scrub: 0.8,
-      },
-    });
-
-    tl.to(spans, {
-      color: "#111",
-      stagger: 0.05,
-      ease: "none",
-    });
-
-    return () => {
-      tl.scrollTrigger?.kill();
-      tl.kill();
-    };
-  }, []);
+  
+  // Use the text container itself as the trigger for better precision
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start 0.85", "start 0.35"], // Start when text is near bottom, finish when mid-top
+  });
 
   const words = text.split(" ");
+  const totalChars = text.length;
 
   return (
     <p ref={containerRef} className={styles["vm-animated-text"]}>
-      {words.map((word, i) => (
-        <span key={i} className={styles["char-span"]}>
-          {word}
-          {i < words.length - 1 ? "\u00A0" : ""}
-        </span>
-      ))}
+      {words.map((word, wordIndex) => {
+        // Calculate the starting index of this word relative to the whole text
+        // (Length of previous words + number of spaces)
+        const prevWords = words.slice(0, wordIndex);
+        const prevChars = prevWords.join("").length + prevWords.length;
+
+        return (
+          <span key={wordIndex} className={styles["word-wrapper"]}>
+            {word.split("").map((char, charIndex) => {
+              const charPosition = prevChars + charIndex;
+              // Add a slight stagger/overlap by spreading the range
+              const start = Math.max(0, (charPosition / totalChars) - 0.05);
+              const end = Math.min(1, (charPosition / totalChars) + 0.05);
+
+              return (
+                <AnimatedChar 
+                  key={charIndex} 
+                  char={char} 
+                  start={start} 
+                  end={end} 
+                  progress={scrollYProgress} 
+                />
+              );
+            })}
+            {/* Add a space after every word to prevent text collapse */}
+            {wordIndex !== words.length - 1 && (
+              <span className={styles["char-span"]} style={{opacity: 0.2}}>&nbsp;</span>
+            )}
+          </span>
+        );
+      })}
     </p>
   );
-}
+};

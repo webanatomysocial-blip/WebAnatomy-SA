@@ -366,7 +366,7 @@ class PHPMailer
     /**
      * An implementation of the PHPMailer OAuthTokenProvider interface.
      *
-     * @var OAuthTokenProvider
+     * @var mixed
      */
     protected $oauth;
 
@@ -427,9 +427,7 @@ class PHPMailer
      * $mail->Debugoutput = new myPsr3Logger;
      * ```
      *
-     * @see SMTP::$Debugoutput
-     *
-     * @var string|callable|\Psr\Log\LoggerInterface
+     * @var string|callable|object
      */
     public $Debugoutput = 'echo';
 
@@ -914,7 +912,7 @@ class PHPMailer
             return;
         }
         //Is this a PSR-3 logger?
-        if ($this->Debugoutput instanceof \Psr\Log\LoggerInterface) {
+        if (is_a($this->Debugoutput, '\Psr\Log\LoggerInterface')) {
             $this->Debugoutput->debug(rtrim($str, "\r\n"));
 
             return;
@@ -5167,16 +5165,7 @@ class PHPMailer
             $privKey = openssl_pkey_get_private($privKeyStr);
         }
         if (openssl_sign($signHeader, $signature, $privKey, 'sha256WithRSAEncryption')) {
-            if (\PHP_MAJOR_VERSION < 8) {
-                // phpcs:ignore PHPCompatibility.FunctionUse.RemovedFunctions.openssl_pkey_freeDeprecated
-                openssl_pkey_free($privKey);
-            }
-
             return base64_encode($signature);
-        }
-        if (\PHP_MAJOR_VERSION < 8) {
-            // phpcs:ignore PHPCompatibility.FunctionUse.RemovedFunctions.openssl_pkey_freeDeprecated
-            openssl_pkey_free($privKey);
         }
 
         return '';
@@ -5506,9 +5495,7 @@ class PHPMailer
     }
 
     /**
-     * Get the OAuthTokenProvider instance.
-     *
-     * @return OAuthTokenProvider
+     * @return mixed
      */
     public function getOAuth()
     {
@@ -5518,7 +5505,7 @@ class PHPMailer
     /**
      * Set an OAuthTokenProvider instance.
      */
-    public function setOAuth(OAuthTokenProvider $oauth)
+    public function setOAuth($oauth)
     {
         $this->oauth = $oauth;
     }

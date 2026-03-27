@@ -127,6 +127,52 @@ export default function OurStoryHomePage() {
 
   return (
     <div className="our-story-home">
+
+      {/* Bottom Section - Logos */}
+      <div className="recognitions-section">
+        <h3 className="head-text" style={{ textAlign: "center" }}>
+          Our Clients
+        </h3>
+
+        <div className="recognitions-carousel">
+          <Swiper
+            modules={[Autoplay]}
+            spaceBetween={30}
+            slidesPerView={2}
+            loop={true}
+            autoplay={{
+              delay: 0,
+              disableOnInteraction: false,
+            }}
+            speed={3000} // Smooth continuous effect
+            breakpoints={{
+              640: {
+                slidesPerView: 2,
+              },
+              768: {
+                slidesPerView: 4,
+              },
+              1024: {
+                slidesPerView: 5,
+              },
+            }}
+            className="recognitions-swiper"
+          >
+            {clientLogos.map((logo, index) => (
+              <SwiperSlide key={index}>
+                <div className="recognition-item">
+                  <img
+                    src={logo}
+                    alt={`Client Logo ${index + 1}`}
+                    className="recognition-logo"
+                  />
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+      </div>
+
       <div className="our-story-main">
         {/* Left Section */}
         <div className="left-section">
@@ -190,50 +236,7 @@ export default function OurStoryHomePage() {
         </div>
       </div>
 
-      {/* Bottom Section - Logos */}
-      <div className="recognitions-section">
-        <h3 className="head-text" style={{ textAlign: "center" }}>
-          Collaborating with 50+ Industry Leaders
-        </h3>
 
-        <div className="recognitions-carousel">
-          <Swiper
-            modules={[Autoplay]}
-            spaceBetween={30}
-            slidesPerView={2}
-            loop={true}
-            autoplay={{
-              delay: 0,
-              disableOnInteraction: false,
-            }}
-            speed={3000} // Smooth continuous effect
-            breakpoints={{
-              640: {
-                slidesPerView: 2,
-              },
-              768: {
-                slidesPerView: 4,
-              },
-              1024: {
-                slidesPerView: 5,
-              },
-            }}
-            className="recognitions-swiper"
-          >
-            {clientLogos.map((logo, index) => (
-              <SwiperSlide key={index}>
-                <div className="recognition-item">
-                  <img
-                    src={logo}
-                    alt={`Client Logo ${index + 1}`}
-                    className="recognition-logo"
-                  />
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        </div>
-      </div>
     </div>
   );
 }

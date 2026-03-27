@@ -19,42 +19,42 @@ const HomeCarosule = () => {
       {
         title: "Story Reel",
         thumbnail: img1,
-        heading: "Design. Disrupt. Deliver",
+        heading: "Design. Market. Scale.",
         subheading: "Find Clarity in Chaos",
-        description: "Cutting-edge solutions tailored to your business needs",
+        description: "Cutting-edge solutions tailored to your business needs.",
         button: "Explore Service",
         link: "/services",
         videoSrc: vid1,
       },
       {
-        title: "Brand Journey",
+        title: "Design",
         thumbnail: newImg,
-        heading: "Built to scale.",
-        subheading: "Designed to win.",
-        description: "From vision to visuals, we shape your brand identity.",
-        button: "View Casestudy",
-        link: "/blog",
-        imageSrc: newImg,
+        heading: "Design",
+        subheading: "That Thinks",
+        description: "Great design isn’t just pretty it’s purposeful. we’re not just about crafting brands; we’re about creating experiences.",
+        button: "About Us",
+        link: "/about",
+        videoSrc: "https://wa.ctsi.in/wp-content/uploads/2025/05/neon-glass-object-looped-animation-2025-03-21-19-40-13-utc.mp4",
       },
       {
-        title: "Creative Impact",
+        title: "Build",
         thumbnail: newImg,
-        heading: "Minimal, Bold, Strategic",
-        subheading: "Let’s Build Something Bold, Something Strong",
-        description: "Engaging designs backed by impactful storytelling.",
-        button: "Schedule a Quick Call",
-        link: "/contact",
-        imageSrc: newImg,
+        heading: "Build",
+        subheading: "What’s Next",
+        description: "Adopting cutting-edge technologies for your enterprise, Creating endless possibilities",
+        button: "About Us",
+        link: "/about",
+        videoSrc: "https://wa.ctsi.in/wp-content/uploads/2025/05/abstract-liquid-shape-animation-loop-2023-11-27-05-28-53-utc-1.mov",
       },
       {
-        title: "Creative Meets Strategy",
+        title: "Market & Scale",
         thumbnail: newImg,
-        heading: "Creative Meets Strategy",
-        subheading: "Design. Disrupt. Deliver",
-        description: "Engaging designs backed by impactful storytelling.",
-        button: "Explore Services",
-        link: "/services",
-        imageSrc: newImg,
+        heading: "Market",
+        subheading: "& Scale",
+        description: "Intelligent design is the essence of nature; that's our inspiration in crafting tomorrow's tech realm",
+        button: "About Us",
+        link: "/about",
+        videoSrc: "https://wa.ctsi.in/wp-content/uploads/2025/05/abstract-glass-rectangles-looped-animation-2023-11-27-05-27-10-utc-1-1.mov",
       },
     ],
     []
@@ -214,9 +214,14 @@ const HomeCarosule = () => {
 
       {/* LEFT CONTENT */}
       <div className={styles['wac-overlay']}>
-        <div className={`${styles['wac-content']} ${styles['left-align']}`}>
+        <div 
+          key={currentIndex} 
+          className={`${styles['wac-content']} ${styles['left-align']}`}
+        >
           <h2 className={styles['wac-heading']}>{slides[currentIndex].heading}</h2>
-          <h3 className={styles['wac-subheading']}>{slides[currentIndex].subheading}</h3>
+          {slides[currentIndex].subheading && (
+            <h3 className={styles['wac-subheading']}>{slides[currentIndex].subheading}</h3>
+          )}
           <p className={styles['wac-description']}>{slides[currentIndex].description}</p>
 
           <a href={slides[currentIndex].link} className={styles['wac-cta-button']}>

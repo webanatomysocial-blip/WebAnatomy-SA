@@ -167,12 +167,7 @@
   font-size: 1.4rem;
 }
 
-.recognitions-section {
-  margin-top: 100px;
-  /* border-top: 1px solid rgba(0, 0, 0, 0.1); */
-  padding-top: 40px;
-  width: 100%;
-}
+/* .recognitions-section removed - empty ruleset */
 
 .recognitions-section .head-text {
   font-size: 1.1rem;

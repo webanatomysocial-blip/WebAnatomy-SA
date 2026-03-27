@@ -9,16 +9,15 @@ const navLinks = [
   { label: "Home", path: "/" },
   { label: "About", path: "/about" },
   { label: "Services", path: "/services" },
-  { label: "Work", path: "/works" },
-  { label: "Blog", path: "/blog" },
+  { label: "Projects", path: "/projects" },
+  { label: "FAQs", path: "/faqs" },
+  { label: "Contact Us", path: "/contact" },
 ];
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
-  const [hidden, setHidden] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [isTransparent, setIsTransparent] = useState(false);
 
   const location = useLocation();
 
@@ -26,43 +25,23 @@ const Header = () => {
     const handleScroll = () => {
       const y = window.scrollY;
       setScrolled(y > 40);
-      if (y > 100) {
-        setHidden(y > lastScrollY);
-      } else {
-        setHidden(false);
-      }
       setLastScrollY(y);
     };
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
 
-  useEffect(() => {
-    if (location.pathname !== "/") {
-      setIsTransparent(false);
-      return;
-    }
-    const wrapper = document.getElementById("transparent-header-wrapper");
-    if (!wrapper) return;
-    const observer = new IntersectionObserver(
-      ([entry]) => setIsTransparent(entry.isIntersecting),
-      { threshold: 0, rootMargin: "-80px 0px 0px 0px" }
-    );
-    observer.observe(wrapper);
-    return () => observer.disconnect();
-  }, [location.pathname]);
+
 
   useEffect(() => {
     setMobileOpen(false);
   }, [location.pathname]);
 
-  const showTransparent = isTransparent && !scrolled;
-
   return (
     <header
-      className={`${styles['header-container']} ${hidden ? styles['header-hidden'] : ""} ${
+      className={`${styles['header-container']} ${
         scrolled ? styles['header-scrolled'] : ""
-      } ${showTransparent ? styles['header-transparent'] : ""}`}
+      }`}
     >
       <div className={styles['header-wrapper']}>
         {/* Logo + nav grouped together on the left */}

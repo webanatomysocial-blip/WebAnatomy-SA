@@ -17,11 +17,10 @@ export default function AboutRecognitions() {
         <div className={styles['recognitions-container']}>
           <div className={styles['recognitions-text-col']}>
             <h2 className={styles['head-text']}>
-              Your Goals Our <br /> Priority
+              Our Clients
             </h2>
             <p className={styles['sub-para-text']}>
-              receive priority treatment for urgent tasks, with an average
-              response time of 24 hours for high-priority clients
+              We prioritize your goals with dedicated attention, ensuring timely and effective solutions tailored to your business needs.
             </p>
           </div>
 

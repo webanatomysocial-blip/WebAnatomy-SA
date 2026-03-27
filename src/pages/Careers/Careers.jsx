@@ -3,7 +3,6 @@ import styles from "./Careers.module.css";
 import AnimatedLetterHeading from "../../components/AnimatedLetterHeading/AnimatedLetterHeading";
 import ClientsImg from "../../components/Clients-img/Clients-img.jsx";
 import TrustSection from "../../components/TrustSection/TrustSection.jsx";
-import Insights from "../../components/Insights/Insights.jsx";
 import AnimatedContent from "../../components/AnimatedContent/AnimatedContent.jsx";
 import {
   GoArrowRight,
@@ -245,9 +244,6 @@ const Careers = () => {
       </AnimatedContent>
       <AnimatedContent {...animProps}>
         <TrustSection />
-      </AnimatedContent>
-      <AnimatedContent {...animProps}>
-        <Insights />
       </AnimatedContent>
     </>
   );
