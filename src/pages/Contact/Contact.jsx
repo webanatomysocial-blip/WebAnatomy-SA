@@ -247,7 +247,7 @@ const Contact = () => {
             <div className={styles["wa-info-grid"]}>
               {/* SOUTH AFRICA */}
               <div className={styles["wa-location-box"]}>
-                <img src="/src/assets/contact/contact.jpg" alt="Pretoria" />
+                <img src="/src/assets/contact/business_building.png" alt="Pretoria Business Anatomy Hub" />
                 <div className={styles["wa-location-meta"]}>
                   <p>
      
