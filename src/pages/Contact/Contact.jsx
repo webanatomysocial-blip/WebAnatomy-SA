@@ -10,6 +10,8 @@ import styles from "./Contact.module.css";
 import AnimatedLetterHeading from "../../components/AnimatedLetterHeading/AnimatedLetterHeading";
 import AnimatedContent from "../../components/AnimatedContent/AnimatedContent.jsx";
 
+import img1 from "../../assets/contact/business_building.png";
+
 const Contact = () => {
   const [formData, setFormData] = useState({
     firstName: "",
@@ -247,12 +249,9 @@ const Contact = () => {
             <div className={styles["wa-info-grid"]}>
               {/* SOUTH AFRICA */}
               <div className={styles["wa-location-box"]}>
-                <img src="/src/assets/contact/business_building.png" alt="Pretoria Business Anatomy Hub" />
+                <img src={img1} alt="Pretoria Business Anatomy Hub" />
                 <div className={styles["wa-location-meta"]}>
-                  <p>
-     
-                    244 Brooks Street, Brooklyn, Pretoria
-                  </p>
+                  <p>244 Brooks Street, Brooklyn, Pretoria</p>
                 </div>
               </div>
 
@@ -262,12 +261,20 @@ const Contact = () => {
                   <InfoCard
                     icon={<GoCommentDiscussion />}
                     title="General Enquiry"
-                    value={<>Moumita <br /> +27 073 335 6100</>}
+                    value={
+                      <>
+                        Moumita <br /> +27 073 335 6100
+                      </>
+                    }
                   />
                   <InfoCard
                     icon={<GoPerson />}
                     title="Sales Enquiry"
-                    value={<>Moumita <br /> +27 073 335 6100</>}
+                    value={
+                      <>
+                        Moumita <br /> +27 073 335 6100
+                      </>
+                    }
                   />
                   <InfoCard
                     icon={<GoMail />}
@@ -277,7 +284,11 @@ const Contact = () => {
                   <InfoCard
                     icon={<GoDeviceMobile />}
                     title="HR Enquiry"
-                    value={<>Moumita <br /> +27 073 335 6100</>}
+                    value={
+                      <>
+                        Moumita <br /> +27 073 335 6100
+                      </>
+                    }
                   />
                 </div>
               </div>

@@ -29,7 +29,7 @@ const Footer = () => {
             <h4 className={styles["footer-col-title"]}>Address</h4>
             <div className={styles["footer-address-list"]}>
                             <div 
-                className={`${styles["footer-address"]} ${styles["footer-address-main"]}`}
+                className={`${styles["footer-address"]} ${styles["footer-address"]}`}
               >
                 <span className={styles["flag-icon"]}>
                   <img src="https://flagcdn.com/w20/in.png" alt="India" style={{ width: '20px', borderRadius: '2px', verticalAlign: 'middle' }} />
