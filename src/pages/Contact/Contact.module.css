@@ -162,7 +162,7 @@
 
 .wa-info-grid {
   display: grid;
-  grid-template-columns: 1fr 1.2fr;
+
   gap: 40px;
   margin-top: 50px;
 }

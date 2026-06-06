@@ -207,7 +207,7 @@ const Contact = () => {
                 <div className={styles["wa-form-consent"]}>
                   <input type="checkbox" id="wa-policy" required />
                   <label htmlFor="wa-policy">
-                    I have read the <a href="/privacy-policy">privacy policy</a>{" "}
+                    I have read the <a style={{color : "blue"}} href="/privacy-policy">privacy policy</a>{" "}
                     and consent to the processing of my data
                   </label>
                 </div>
@@ -248,48 +248,44 @@ const Contact = () => {
 
             <div className={styles["wa-info-grid"]}>
               {/* SOUTH AFRICA */}
-              <div className={styles["wa-location-box"]}>
+              {/* <div className={styles["wa-location-box"]}>
                 <img src={img1} alt="Pretoria Business Anatomy Hub" />
                 <div className={styles["wa-location-meta"]}>
-                  <p>244 Brooks Street, Brooklyn, Pretoria</p>
+                  <p>32 Pretorius Street, Vorna Valley, Midrand.</p>
                 </div>
-              </div>
+              </div> */}
 
               {/* RIGHT */}
               <div className={styles["wa-info-right"]}>
                 <div className={styles["wa-info-cards"]}>
                   <InfoCard
                     icon={<GoCommentDiscussion />}
-                    title="General Enquiry"
+                    title=""
                     value={
                       <>
-                        Moumita <br /> +27 073 335 6100
+                      
+                      <a style={{color : "blue" , textDecoration : "none"}} href="https://wa.me/+917032090980">
+                      Moumita <br /><br />    IN: +91 7032 090 980
+                      </a><br /> <br />
+                      <a style={{color : "blue" , textDecoration : "none"}} href="https://wa.me/+270810495848">
+                       SA: +27 (0) 810 495 848
+                      </a> 
                       </>
                     }
                   />
-                  <InfoCard
-                    icon={<GoPerson />}
-                    title="Sales Enquiry"
-                    value={
-                      <>
-                        Moumita <br /> +27 073 335 6100
-                      </>
-                    }
-                  />
+                  
                   <InfoCard
                     icon={<GoMail />}
                     title="Email"
-                    value="info@webanatomy.in"
-                  />
-                  <InfoCard
-                    icon={<GoDeviceMobile />}
-                    title="HR Enquiry"
                     value={
                       <>
-                        Moumita <br /> +27 073 335 6100
+                        <a  href="mailto:admin@webaxis.co.za" style={{color : "blue" , textDecoration : "none"}}>
+                         admin@webaxis.co.za
+                        </a>
                       </>
                     }
                   />
+                 
                 </div>
               </div>
             </div>

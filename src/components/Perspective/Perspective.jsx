@@ -1,5 +1,5 @@
 import styles from "./Perspective.module.css";
-import AnimatedContent from "../AnimatedContent/AnimatedContent";
+
 import img1 from "../../assets/images/about-page/our-story/93420.jpg";
 import img2 from "../../assets/about-page/perspective/vibe-coding.webp";
 import img3 from "../../assets/about-page/perspective/future-first.webp";
@@ -8,7 +8,7 @@ import img4 from "../../assets/about-page/perspective/ethical.jpg";
 const Pers = () => {
   return (
     <section className={styles["pers-section"]}>
-      <AnimatedContent>
+   
         <div className={styles["pers-container"]}>
           <div className={styles["pers-header"]}>
             <h2 className={styles["pers-title"]}>Our Perspective</h2>
@@ -112,7 +112,7 @@ const Pers = () => {
             </div>
           </div>
         </div>
-      </AnimatedContent>
+  
     </section>
   );
 };
