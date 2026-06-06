@@ -21,6 +21,7 @@ import Industries from "./pages/Industries/Industries";
 import FAQPage from "./pages/FAQ/FAQPage";
 import Privacy from "./pages/Privacy/Privacy";
 import Terms from "./pages/Terms/Terms";
+import NotFound from "./pages/NotFound/NotFound";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import "./styles/global.css";
@@ -69,6 +70,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/faqs" element={<FAQPage />} />
         <Route path="/privacy" element={<Privacy />} />
         <Route path="/terms" element={<Terms />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
     </BrowserRouter>
