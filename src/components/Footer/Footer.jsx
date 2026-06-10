@@ -47,7 +47,7 @@ const Footer = () => {
                 <span className={styles["flag-icon"]}>
                   <img src="https://flagcdn.com/w20/za.png" alt="SA" style={{ width: '20px', borderRadius: '2px', verticalAlign: 'middle' }} />
                 </span> 
-               RK Technologies, 32 Pretorius Street, Vorna Valley, Midrand.
+               RK IT Technologies, 32 Pretorius Street, Vorna Valley, Midrand.
 
               </div>
 

@@ -3,6 +3,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async";
 import Home from "./pages/Home/Home";
 import Contact from "./pages/Contact/Contact";
 import Careers from "./pages/Careers/Careers";
@@ -49,8 +50,9 @@ requestAnimationFrame(raf);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <BrowserRouter>
-      <ScrollToTop />
+    <HelmetProvider>
+      <BrowserRouter>
+        <ScrollToTop />
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -73,6 +75,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
-    </BrowserRouter>
+      </BrowserRouter>
+    </HelmetProvider>
   </React.StrictMode>,
 );

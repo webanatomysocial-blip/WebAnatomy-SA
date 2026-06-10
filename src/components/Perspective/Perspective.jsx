@@ -1,9 +1,9 @@
 import styles from "./Perspective.module.css";
 
 import img1 from "../../assets/images/about-page/our-story/93420.jpg";
-import img2 from "../../assets/about-page/perspective/vibe-coding.webp";
-import img3 from "../../assets/about-page/perspective/future-first.webp";
-import img4 from "../../assets/about-page/perspective/ethical.jpg";
+import img2 from "../../assets/about-images/about_img_2.jpg";
+import img3 from "../../assets/about-images/about_img_3.jpg";
+import img4 from "../../assets/about-images/about_img_4.jpg";
 
 const Pers = () => {
   return (

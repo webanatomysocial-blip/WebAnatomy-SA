@@ -1,9 +1,13 @@
 import React, { useEffect } from "react";
 import styles from "./Privacy.module.css";
+import useCanonical from "../../hooks/useCanonical";
+import SEO from "../../components/SEO/SEO";
 import AnimatedLetterHeading from "../../components/AnimatedLetterHeading/AnimatedLetterHeading";
 import AnimatedContent from "../../components/AnimatedContent/AnimatedContent";
 
 const Privacy = () => {
+  useCanonical("https://webaxis.co.za/privacy");
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -17,6 +21,7 @@ const Privacy = () => {
 
   return (
     <div className={styles.privacyPage}>
+      <SEO title="Privacy Policy | Web Axis South Africa" description="Read the Web Axis Privacy Policy to understand how we collect, use, store, and protect your personal information and website data." />
       <AnimatedContent {...animProps}>
         <section className={styles.heroSection}>
           <div className={styles.container}>

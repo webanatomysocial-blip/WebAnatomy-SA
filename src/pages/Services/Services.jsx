@@ -1,6 +1,8 @@
 import React, { useEffect, useRef } from "react";
 import { GoArrowUpRight } from "react-icons/go";
+import useCanonical from "../../hooks/useCanonical";
 import { Link } from "react-router-dom";
+import SEO from "../../components/SEO/SEO";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import FAQ from "../../components/FAQ/FAQ";
@@ -83,6 +85,7 @@ const approachData = [
 ];
 
 export default function Services() {
+  useCanonical("https://webaxis.co.za/services");
   const heroRef = useRef(null);
   const cardsRef = useRef([]);
   const approachRef = useRef(null);
@@ -174,9 +177,25 @@ export default function Services() {
     card.style.setProperty("--mouse-y", `${e.clientY - rect.top}px`);
   };
 
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Digital Marketing Services",
+    "provider": {
+      "@type": "Organization",
+      "name": "Web Axis"
+    },
+    "serviceType": "Digital Marketing, SEO, Web Development and Branding",
+    "areaServed": {
+      "@type": "Country",
+      "name": "South Africa"
+    },
+    "url": "https://webaxis.co.za/services"
+  };
+
   return (
     <>
-    
+        <SEO title="Our Services | Digital Marketing Company South Africa" description="Discover our full range of digital marketing, SEO, web development, branding, and business growth solutions for companies in South Africa." schema={schema} />
         {/* Hero */}
         <section className={styles["sp-hero"]} ref={heroRef}>
           <AnimatedContent {...animProps}>

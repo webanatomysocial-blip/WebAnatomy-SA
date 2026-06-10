@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { GoArrowRight } from "react-icons/go";
+import useCanonical from "../../hooks/useCanonical";
+import SEO from "../../components/SEO/SEO";
 import {
   GoCommentDiscussion,
   GoPerson,
@@ -13,6 +15,7 @@ import AnimatedContent from "../../components/AnimatedContent/AnimatedContent.js
 import img1 from "../../assets/contact/business_building.png";
 
 const Contact = () => {
+  useCanonical("https://webaxis.co.za/contact");
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -87,8 +90,17 @@ const Contact = () => {
     }
   };
 
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Contact Web Axis",
+    "url": "https://webaxis.co.za/contact",
+    "description": "Contact Web Axis for digital marketing, SEO, web development, and branding services."
+  };
+
   return (
     <>
+      <SEO title="Web Axis | Contact us for Digital Marketing Services" description="Ready to grow your business? Contact Web Axis for SEO, digital marketing, website development, branding, and custom digital solutions." schema={schema} />
       {/* ===============================
           SECTION 0 – HERO
       =============================== */}

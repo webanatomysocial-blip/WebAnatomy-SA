@@ -1,9 +1,13 @@
 import React, { useEffect } from "react";
 import styles from "../Privacy/Privacy.module.css";
+import useCanonical from "../../hooks/useCanonical";
+import SEO from "../../components/SEO/SEO";
 import AnimatedLetterHeading from "../../components/AnimatedLetterHeading/AnimatedLetterHeading";
 import AnimatedContent from "../../components/AnimatedContent/AnimatedContent";
 
 const Terms = () => {
+  useCanonical("https://webaxis.co.za/terms");
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -17,6 +21,7 @@ const Terms = () => {
 
   return (
     <div className={styles.privacyPage}>
+      <SEO title="Terms & Conditions | Web Axis South Africa" description="Read the Web Axis Terms & Conditions outlining website usage, service agreements, user responsibilities, and legal policies." />
       <AnimatedContent {...animProps}>
         <section className={styles.heroSection}>
           <div className={styles.container}>

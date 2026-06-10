@@ -1,6 +1,8 @@
 import React, { useEffect, useRef } from "react";
 import { GoArrowUpRight } from "react-icons/go";
+import useCanonical from "../../hooks/useCanonical";
 import gsap from "gsap";
+import SEO from "../../components/SEO/SEO";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import FAQ from "../../components/FAQ/FAQ.jsx";
 import AnimatedLetterHeading from "../../components/AnimatedLetterHeading/AnimatedLetterHeading.jsx";
@@ -56,6 +58,7 @@ const projectsData = [
 ];
 
 export default function Works() {
+  useCanonical("https://webaxis.co.za/projects");
   const heroRef = useRef(null);
   const cardsRef = useRef([]);
 
@@ -108,8 +111,17 @@ export default function Works() {
     return () => ctx.revert();
   }, []);
 
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Web Axis Projects",
+    "url": "https://webaxis.co.za/projects",
+    "description": "Explore our portfolio of digital marketing, SEO, web development, and branding projects."
+  };
+
   return (
     <>
+        <SEO title="Our Projects | Digital Marketing & Web Development Portfolio" description="Explore Web Axis projects and success stories in digital marketing, SEO, web development, and branding for businesses across South Africa." schema={schema} />
         {/* Hero */}
         <section className={styles["wp-hero"]} ref={heroRef}>
           <div className={styles["wp-hero-inner"]}>
