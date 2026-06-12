@@ -11,7 +11,7 @@ import FAQ from "../../components/FAQ/FAQ.jsx";
 import ClientsDifference from "../../components/ClientsDifference/ClientsDifference.jsx";
 
 export default function Home() {
-  useCanonical();
+  useCanonical('https://webaxis.co.za');
   const schema = {
     "@context": "https://schema.org",
     "@type": "Organization",

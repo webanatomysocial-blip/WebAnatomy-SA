@@ -10,7 +10,7 @@ import Recognised from "../../components/Recognised/Recognised.jsx";
 import AboutRecognitions from "../../components/AboutRecognitions/AboutRecognitions.jsx";
 
 const About = () => {
-  useCanonical();
+  useCanonical("https://webaxis.co.za/about");
   const schema = [
     {
       "@context": "https://schema.org",
