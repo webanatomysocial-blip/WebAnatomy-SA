@@ -89,6 +89,7 @@
 .footer-social {
   display: flex;
   gap: 16px;
+  display: none;
 }
 
 .footer-social a {

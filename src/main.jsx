@@ -25,6 +25,7 @@ import Terms from "./pages/Terms/Terms";
 import NotFound from "./pages/NotFound/NotFound";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
+import CookieConsent from "./components/CookieConsent/CookieConsent";
 import "./styles/global.css";
 import Lenis from "@studio-freight/lenis";
 
@@ -75,6 +76,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
+      <CookieConsent />
       </BrowserRouter>
     </HelmetProvider>
   </React.StrictMode>,

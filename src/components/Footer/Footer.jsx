@@ -91,7 +91,7 @@ const Footer = () => {
           <div className={styles["footer-col"]}>
             <h4 className={styles["footer-col-title"]}>Contact</h4>
             <ul className={styles["footer-links"]}>
-              <li>Moumita</li>
+              {/* <li>Moumita</li> */}
               <li>
                 <a style={{
                   display : "flex",
@@ -139,7 +139,10 @@ const Footer = () => {
         <div className={styles["footer-bottom"]}>
           <span className={styles["footer-copy"]}>
             {currentYear} © All Rights Reserved, Business Anatomy Digital Services
-            In Association with <strong> <a href="https://webanatomy.in">Web Anatomy</a></strong>
+            In Association with <span style={{
+              fontWeight :"600",
+              color : "#d9d9d9"
+            }}>RK IT Technologies</span> 
           </span>
           <div className={styles["footer-bottom-right"]}>
             <div className={styles["footer-bottom-links"]}>

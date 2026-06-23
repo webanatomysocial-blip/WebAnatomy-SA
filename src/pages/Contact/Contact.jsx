@@ -277,7 +277,8 @@ const Contact = () => {
                       <>
                       
                       <a style={{color : "blue" , textDecoration : "none"}} href="https://wa.me/+917032090980">
-                      Moumita <br /><br />    IN: +91 7032 090 980
+                      {/* Moumita <br /><br />  */}
+                         IN: +91 7032 090 980
                       </a><br /> <br />
                       <a style={{color : "blue" , textDecoration : "none"}} href="https://wa.me/+270810495848">
                        SA: +27 (0) 810 495 848
