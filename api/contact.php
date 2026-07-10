@@ -42,7 +42,7 @@ try {
     $mail->Host       = 'smtp.gmail.com';
     $mail->SMTPAuth   = true;
     $mail->Username   = 'webanatomysocial@gmail.com';
-    $mail->Password   = 'notq rtqr ewjm inke';
+    $mail->Password   = 'notqrtqrewjminke';
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
     $mail->Port       = 587;
 
