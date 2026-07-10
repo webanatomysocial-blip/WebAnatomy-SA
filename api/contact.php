@@ -41,14 +41,16 @@ try {
     $mail->isSMTP();
     $mail->Host       = 'smtp.gmail.com';
     $mail->SMTPAuth   = true;
-    $mail->Username   = 'YOUR_GMAIL_ADDRESS'; // USER TODO: Replace with your Gmail
-    $mail->Password   = 'YOUR_GMAIL_APP_PASSWORD'; // USER TODO: Replace with your App Password
+    $mail->Username   = 'webanatomysocial@gmail.com';
+    $mail->Password   = 'notq rtqr ewjm inke';
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
     $mail->Port       = 587;
 
     // Recipients
-    $mail->setFrom('YOUR_GMAIL_ADDRESS', 'WebAnatomy Contact Form');
-    $mail->addAddress('info@webanatomy.in'); // Destination email
+    $mail->setFrom('webanatomysocial@gmail.com', 'WebAnatomy Contact Form');
+    $mail->addAddress('webanatomysocial@gmail.com');
+    $mail->addAddress('srujan@mosol9.com');
+    $mail->addAddress('supraja@mosol9.com');
 
     // Content
     $mail->isHTML(true);
