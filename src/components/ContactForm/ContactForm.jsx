@@ -36,7 +36,7 @@ const ContactForm = () => {
 
       const result = await response.json();
 
-      if (result.status === "success") {
+      if (result.success || result.status === "success") {
         setStatus({
           type: "success",
           message: "Thank you! Your message has been sent.",
