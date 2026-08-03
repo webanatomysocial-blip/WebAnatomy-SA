@@ -62,6 +62,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/about" element={<About />} />
         <Route path="/projects" element={<Works />} />
         <Route path="/projects/eryntis" element={<Erynits />} />
+        <Route path="/projects/erynits" element={<Erynits />} />
         <Route path="/projects/agil" element={<Agil />} />
         <Route path="/projects/mudra" element={<Mudra />} />
         <Route path="/projects/soniva" element={<Soniva />} />
@@ -72,6 +73,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/industries" element={<Industries />} />
         <Route path="/faqs" element={<FAQPage />} />
         <Route path="/privacy" element={<Privacy />} />
+        <Route path="/privacy-policy" element={<Privacy />} />
         <Route path="/terms" element={<Terms />} />
         <Route path="*" element={<NotFound />} />
       </Routes>

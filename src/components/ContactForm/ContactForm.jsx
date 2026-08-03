@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { GoArrowRight } from "react-icons/go";
 import styles from "./ContactForm.module.css";
 
@@ -141,7 +142,7 @@ const ContactForm = () => {
         <div className={styles["wa-form-consent"]}>
           <input type="checkbox" id="wa-policy" required />
           <label htmlFor="wa-policy">
-            I have read the <a href="/privacy-policy">privacy policy</a> and
+            I have read the <Link to="/privacy">privacy policy</Link> and
             consent to the processing of my data
           </label>
         </div>

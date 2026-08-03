@@ -1,29 +1,29 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import SEO from "../../components/SEO/SEO.jsx";
 import styles from "./Soniva.module.css";
 
-gsap.registerPlugin(ScrollTrigger);
+import img1 from "../../assets/projects/soniva/Soniva-dental-02.png";
+import img2 from "../../assets/projects/soniva/Soniva-dental-03.png";
+import img3 from "../../assets/projects/soniva/Soniva-dental-04.png";
+import img4 from "../../assets/projects/soniva/Soniva-dental-05.png";
+import img5 from "../../assets/projects/soniva/Soniva-dental-06.png";
 
-const sonivaImages = [
-  "https://webanatomy.in/wp-content/uploads/2024/07/Soniva-dental-02.png",
-  "https://webanatomy.in/wp-content/uploads/2024/07/Soniva-dental-03.png",
-  "https://webanatomy.in/wp-content/uploads/2024/07/Soniva-dental-04.png",
-  "https://webanatomy.in/wp-content/uploads/2024/07/Soniva-dental-05.png",
-  "https://webanatomy.in/wp-content/uploads/2024/07/Soniva-dental-06-883x1024.png",
-];
+const sonivaImages = [img1, img2, img3, img4, img5];
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Soniva() {
   const containerRef = useRef(null);
 
   useEffect(() => {
-    // Scroll to top when component mounts
     window.scrollTo(0, 0);
 
     const ctx = gsap.context(() => {
       const images = containerRef.current.querySelectorAll(`.${styles.imageContainer}`);
       
-      images.forEach((img, index) => {
+      images.forEach((img) => {
         gsap.fromTo(
           img,
           { opacity: 0, y: 50 },
@@ -46,12 +46,18 @@ export default function Soniva() {
   }, []);
 
   return (
-    <div className={styles.sonivaPage} ref={containerRef}>
-      {sonivaImages.map((src, index) => (
-        <div key={index} className={styles.imageContainer}>
-          <img src={src} alt={`Soniva Dental Case Study Document ${index + 1}`} className={styles.fullWidthImg} />
-        </div>
-      ))}
-    </div>
+    <>
+      <SEO
+        title="Soniva Dental Branding Case Study | Web Axis Projects"
+        description="Explore our digital services and brand presentation for Soniva Dental."
+      />
+      <div className={styles.sonivaPage} ref={containerRef}>
+        {sonivaImages.map((src, index) => (
+          <div key={index} className={styles.imageContainer}>
+            <img src={src} alt={`Soniva Dental Case Study Document ${index + 1}`} className={styles.fullWidthImg} />
+          </div>
+        ))}
+      </div>
+    </>
   );
 }

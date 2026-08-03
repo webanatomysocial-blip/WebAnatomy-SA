@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { GoArrowRight } from "react-icons/go";
 import useCanonical from "../../hooks/useCanonical";
 import SEO from "../../components/SEO/SEO";
@@ -219,7 +220,7 @@ const Contact = () => {
                 <div className={styles["wa-form-consent"]}>
                   <input type="checkbox" id="wa-policy" required />
                   <label htmlFor="wa-policy">
-                    I have read the <a style={{color : "blue"}} href="/privacy-policy">privacy policy</a>{" "}
+                    I have read the <Link style={{color : "blue"}} to="/privacy">privacy policy</Link>{" "}
                     and consent to the processing of my data
                   </label>
                 </div>

@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 import { GoArrowUpRight } from "react-icons/go";
 import useCanonical from "../../hooks/useCanonical";
 import gsap from "gsap";
@@ -162,11 +163,11 @@ export default function Works() {
                   <AnimatedContent {...animProps}>
             <div className={styles["wp-grid"]}>
               {projectsData.map((project, index) => (
-                <a
+                <Link
                   key={index}
-                  href={
+                  to={
                     project.title === "Erynits"
-                      ? "/projects/eryntis"
+                      ? "/projects/erynits"
                       : project.title === "AGIL"
                       ? "/projects/agil"
                       : project.title === "Mudra Yoga"
@@ -201,7 +202,7 @@ export default function Works() {
                     <h3 className={styles["wp-card-title"]}>{project.title}</h3>
                     <p className={styles["wp-card-desc"]}>{project.desc}</p>
                   </div>
-                </a>
+                </Link>
               ))}
             </div>
             </AnimatedContent>

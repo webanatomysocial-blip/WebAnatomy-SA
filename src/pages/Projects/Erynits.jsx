@@ -1,26 +1,23 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import SEO from "../../components/SEO/SEO.jsx";
 import AnimatedContent from "../../components/AnimatedContent/AnimatedContent.jsx";
 import styles from "./Erynits.module.css";
 
-// Import images
-const images = [
-  "https://webanatomy.in/wp-content/uploads/2025/07/b14197227528057.68427ce46f798.webp", // Hero
-  "https://webanatomy.in/wp-content/uploads/2025/07/f8ed5f227528057.685bc272e63e1.webp",
-  "https://webanatomy.in/wp-content/uploads/2025/07/ca55d0227528057.685bc04f37e90.webp",
-  "https://webanatomy.in/wp-content/uploads/2025/07/8be785227528057.685b8ab114077.webp",
-];
+// Import local images
+import img0 from "../../assets/projects/erynits/erynits-00.webp";
+import img1 from "../../assets/projects/erynits/erynits-01.webp";
+import img2 from "../../assets/projects/erynits/erynits-02.webp";
+import img3 from "../../assets/projects/erynits/erynits-03.webp";
+import splitLeft from "../../assets/projects/erynits/erynits-split-left.jpg";
+import splitRight from "../../assets/projects/erynits/erynits-split-right.webp";
+import final1 from "../../assets/projects/erynits/erynits-final-01.webp";
+import final2 from "../../assets/projects/erynits/erynits-final-02.webp";
 
-const splitImages = {
-  left: "https://webanatomy.in/wp-content/uploads/2025/07/Untitled-design-17-1024x853.jpg",
-  right: "https://webanatomy.in/wp-content/uploads/2025/07/c2bee1227528057.685bc1c38b489.webp"
-};
-
-const finalImages = [
-  "https://webanatomy.in/wp-content/uploads/2025/07/894b47227528057.685bc306821f6.webp",
-  "https://webanatomy.in/wp-content/uploads/2025/07/484a93227528057.685bc30681b74.webp"
-];
+const images = [img0, img1, img2, img3];
+const splitImages = { left: splitLeft, right: splitRight };
+const finalImages = [final1, final2];
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -28,6 +25,7 @@ export default function Erynits() {
   const containerRef = useRef(null);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     const ctx = gsap.context(() => {
       const imgContainers = containerRef.current.querySelectorAll(`.${styles.imageContainer}`);
       
@@ -53,57 +51,52 @@ export default function Erynits() {
     return () => ctx.revert();
   }, []);
 
-  const animProps = {
-    distance: 100,
-    direction: "vertical",
-    reverse: false,
-    duration: 1,
-    ease: "power2.out",
-    initialOpacity: 0,
-    animateOpacity: true,
-    threshold: 0.1,
-  };
-
   return (
-    <div className={styles.erynitsPage} ref={containerRef}>
-      {/* Hero Section */}
-      <section className={styles.heroSection}>
-        <div className={styles.imageContainer}>
-          <img src={images[0]} alt="Erynits Hero" className={styles.fullWidthImg} />
-        </div>
-      </section>
-
-      {/* Main Image Stack */}
-      <section className={styles.stackSection}>
-        {images.slice(1).map((src, index) => (
-          <div key={index} className={styles.imageContainer}>
-            <img src={src} alt={`Erynits Branding ${index + 1}`} className={styles.fullWidthImg} />
+    <>
+      <SEO
+        title="Erynits Branding Case Study | Web Axis Projects"
+        description="Explore our branding and art exhibition design work for Erynits."
+      />
+      <div className={styles.erynitsPage} ref={containerRef}>
+        {/* Hero Section */}
+        <section className={styles.heroSection}>
+          <div className={styles.imageContainer}>
+            <img src={images[0]} alt="Erynits Hero" className={styles.fullWidthImg} />
           </div>
-        ))}
-      </section>
+        </section>
 
-      {/* Split Section */}
-      <section className={styles.splitSection}>
-        <div className={styles.imageContainer}>
-          <div className={styles.splitGrid}>
-            <div className={styles.splitLeft}>
-              <img src={splitImages.left} alt="Erynits Detail" className={styles.fullWidthImg} />
+        {/* Main Image Stack */}
+        <section className={styles.stackSection}>
+          {images.slice(1).map((src, index) => (
+            <div key={index} className={styles.imageContainer}>
+              <img src={src} alt={`Erynits Branding ${index + 1}`} className={styles.fullWidthImg} />
             </div>
-            <div className={styles.splitRight}>
-              <img src={splitImages.right} alt="Erynits Layout" className={styles.fullWidthImg} />
+          ))}
+        </section>
+
+        {/* Split Section */}
+        <section className={styles.splitSection}>
+          <div className={styles.imageContainer}>
+            <div className={styles.splitGrid}>
+              <div className={styles.splitLeft}>
+                <img src={splitImages.left} alt="Erynits Detail" className={styles.fullWidthImg} />
+              </div>
+              <div className={styles.splitRight}>
+                <img src={splitImages.right} alt="Erynits Layout" className={styles.fullWidthImg} />
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Final Images */}
-      <section className={styles.stackSection}>
-        {finalImages.map((src, index) => (
-          <div key={index} className={styles.imageContainer}>
-            <img src={src} alt={`Erynits Final ${index + 1}`} className={styles.fullWidthImg} />
-          </div>
-        ))}
-      </section>
-    </div>
+        {/* Final Images */}
+        <section className={styles.stackSection}>
+          {finalImages.map((src, index) => (
+            <div key={index} className={styles.imageContainer}>
+              <img src={src} alt={`Erynits Final ${index + 1}`} className={styles.fullWidthImg} />
+            </div>
+          ))}
+        </section>
+      </div>
+    </>
   );
 }

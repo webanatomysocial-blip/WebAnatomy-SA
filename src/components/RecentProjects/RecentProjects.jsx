@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 import { GoArrowUpRight } from "react-icons/go";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -141,16 +142,16 @@ export default function RecentProjects({
             </div>
             <div className={styles["header-right"]}>
               <p className={styles["section-desc"]}>{subtitle}</p>
-              <a href="/projects" className={styles["explore-more-btn"]}>
+              <Link to="/projects" className={styles["explore-more-btn"]}>
                 Explore More <GoArrowUpRight className={styles["arrow-icon"]} />
-              </a>
+              </Link>
             </div>
           </header>
 
           <div className={styles["projects-grid"]} ref={listRef}>
             {projectsData.map((project, index) => (
-              <a
-                href={project.link || "#"}
+              <Link
+                to={project.link || "#"}
                 key={index}
                 className={styles["project-card"]}
               >
@@ -170,7 +171,7 @@ export default function RecentProjects({
                   </div>
                   <h3 className={styles["project-title"]}>{project.title}</h3>
                 </div>
-              </a>
+              </Link>
             ))}
           </div>
         </div>
